@@ -1,0 +1,15 @@
+apiVersion: radix.equinor.com/v1
+kind: RadixApplication
+metadata:
+  name: radix-mini-app
+spec:
+  environments:
+    - name: dev
+      build:
+        from: main
+  components:
+    - name: server
+      image: nginxinc/nginx-unprivileged
+      ports:
+        - name: http
+          port: 8080
