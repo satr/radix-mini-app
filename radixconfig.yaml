@@ -13,5 +13,6 @@ spec:
       ports:
         - name: http
           port: 8080
+      publicPort: http
       ingressConfiguration:
         - leastconnectedlb
