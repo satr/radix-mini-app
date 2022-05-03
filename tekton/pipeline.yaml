@@ -7,6 +7,9 @@ spec:
     - name: hello
       taskRef:
         name: hello
+    - name: test1-task
+      taskRef:
+        name: test1
     - name: goodbye
       runAfter:
         - hello
