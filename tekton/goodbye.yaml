@@ -8,4 +8,4 @@ spec:
       image: ubuntu
       script: |
         #!/bin/bash
-        echo "Goodbye World!"
+        echo "Goodbye, see you!"
