@@ -1,3 +1,3 @@
 # radix-mini-app
 
-Minimum app for Radix
+Minimum app for Radix 
