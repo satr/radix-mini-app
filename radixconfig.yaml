@@ -3,10 +3,15 @@ kind: RadixApplication
 metadata:
   name: radix-mini-app
 spec:
+  build:
+    variables:
+      VAR1: val1
   environments:
     - name: dev
       build:
         from: main
+        variables:
+          VAR2: val2
   components:
     - name: server
       image: nginxinc/nginx-unprivileged

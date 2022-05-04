@@ -3,10 +3,17 @@ kind: Task
 metadata:
   name: hello
 spec:
+  params:
+    - name: VAR1t
+      type: string
+      default: not-set
   steps:
     - name: hello
       image: alpine
+      env:
+        - name: VAR11a
+          value: "Val1"
+        - name: VAR11b
+          value: $(params.VAR1t)
       command:
-        - echo
-      args:
-        - "Hello World!"
+        - "printenv"
