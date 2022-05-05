@@ -8,7 +8,17 @@ spec:
       type: string
       default:
         type: string
-        stringVal: not-set2
+        stringVal: not-set-p1
+    - name: VAR2
+      type: string
+      default:
+        type: string
+        stringVal: not-set-p2
+    - name: VAR3
+      type: string
+      default:
+        type: string
+        stringVal: not-set-p3
   tasks:
     - name: hello
       params:
@@ -16,6 +26,14 @@ spec:
           value:
             type: string
             stringVal: $(params.VAR1)
+        - name: VAR2t
+          value:
+            type: string
+            stringVal: $(params.VAR2)
+        - name: VAR3t
+          value:
+            type: string
+            stringVal: $(params.VAR3)
       taskRef:
         name: hello
     - name: test1-task
