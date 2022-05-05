@@ -6,7 +6,9 @@ spec:
   params:
     - name: VAR1t
       type: string
-      default: not-set
+      default:
+        type: string
+        stringVal: not-set2
   steps:
     - name: hello
       image: alpine

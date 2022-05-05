@@ -6,12 +6,16 @@ spec:
   params:
     - name: VAR1
       type: string
-      default: not-set2
+      default:
+        type: string
+        stringVal: not-set2
   tasks:
     - name: hello
       params:
         - name: VAR1t
-          value: $(params.VAR1)
+          value:
+            type: string
+            stringVal: $(params.VAR1)
       taskRef:
         name: hello
     - name: test1-task
