@@ -11,7 +11,13 @@ spec:
       build:
         from: main
         variables:
+          VAR1: val1dev
           VAR2: val2
+    - name: prod
+      build:
+        from: release
+        variables:
+          VAR3: val3
   components:
     - name: server
       image: nginxinc/nginx-unprivileged
