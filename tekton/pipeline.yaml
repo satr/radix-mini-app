@@ -37,10 +37,12 @@ spec:
       taskRef:
         name: hello
     - name: test1-task
+      runAfter:
+        - hello
       taskRef:
         name: test1
     - name: goodbye
       runAfter:
-        - hello
+        - test1-task
       taskRef:
         name: goodbye
