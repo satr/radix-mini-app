@@ -8,4 +8,5 @@ spec:
       image: ubuntu
       script: |
         #!/bin/bash
+        for i in {"five","four","three","two","one"}; do echo $i;sleep 3; done
         echo "Goodbye, see you!"
