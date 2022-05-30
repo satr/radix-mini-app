@@ -33,3 +33,4 @@ spec:
           value: $(params.VAR3t)
       command:
         - "printenv"
+
