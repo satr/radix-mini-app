@@ -20,10 +20,11 @@ spec:
           VAR3: val3
   components:
     - name: server
-      image: nginxinc/nginx-unprivileged
+      image: nginxinc/nginx-unprivileged:1.22-alpine
       ports:
         - name: http
           port: 8080
       publicPort: http
-      ingressConfiguration:
-        - leastconnectedlb
+      authentication:
+        oauth2:
+          clientId: 7ef841f8-a263-45ea-8993-683cc6817ae2
