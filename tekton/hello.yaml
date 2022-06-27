@@ -33,4 +33,7 @@ spec:
           value: $(params.VAR3t)
       command:
         - "printenv"
-
+  volumes:
+    - name: s
+      secret:
+        secretName: "a"
