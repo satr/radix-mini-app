@@ -18,6 +18,7 @@ spec:
         from: release
         variables:
           VAR3: val3
+    - name: a1
   components:
     - name: server
       image: nginxinc/nginx-unprivileged:1.22-alpine
