@@ -19,6 +19,7 @@ spec:
         variables:
           VAR3: val3
     - name: a1
+    - name: a2
   components:
     - name: server
       image: nginxinc/nginx-unprivileged:1.22-alpine
