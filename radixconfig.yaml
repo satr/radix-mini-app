@@ -21,6 +21,7 @@ spec:
     - name: a1
     - name: a2
     - name: a3
+    - name: a4
   components:
     - name: server
       image: nginxinc/nginx-unprivileged:1.22-alpine
