@@ -42,7 +42,13 @@ spec:
         oauth2:
           clientId: 7ef841f8-a263-45ea-8993-683cc6817ae2
       environmentConfig:
+        - environment: dev
+          enabled: false
         - environment: comps1
+          enabled: false
+        - environment: comps2
+          enabled: false
+        - environment: comps3
           enabled: false
     - name: server3
       image: nginxinc/nginx-unprivileged:1.22-alpine
@@ -77,4 +83,6 @@ spec:
         - environment: comps1
           enabled: false
         - environment: comps2
+          enabled: false
+        - environment: comps3
           enabled: false
