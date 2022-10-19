@@ -42,7 +42,7 @@ spec:
         oauth2:
           clientId: 7ef841f8-a263-45ea-8993-683cc6817ae2
       environmentConfig:
-        - name: comps2
+        - environment: comps2
           enabled: false
     - name: server3
       image: nginxinc/nginx-unprivileged:1.22-alpine
@@ -54,9 +54,9 @@ spec:
         oauth2:
           clientId: 7ef841f8-a263-45ea-8993-683cc6817ae2
       environmentConfig:
-        - name: comps2
+        - environment: comps2
           enabled: false
-        - name: comps3
+        - environment: comps3
           enabled: false
     - name: server4
       image: nginxinc/nginx-unprivileged:1.22-alpine
@@ -68,9 +68,9 @@ spec:
         oauth2:
           clientId: 7ef841f8-a263-45ea-8993-683cc6817ae2
       environmentConfig:
-        - name: dev
+        - environment: dev
           enabled: false
-        - name: comps2
+        - environment: comps2
           enabled: false
-        - name: comps3
+        - environment: comps3
           enabled: false
