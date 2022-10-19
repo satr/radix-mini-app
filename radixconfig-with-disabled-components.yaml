@@ -84,10 +84,6 @@ spec:
           clientId: 7ef841f8-a263-45ea-8993-683cc6817ae2
       environmentConfig:
         - environment: dev
-          enabled: false
-        - environment: comps1
-          enabled: false
+          enabled: true
         - environment: comps2
-          enabled: false
-        - environment: comps3
-          enabled: false
+          enabled: true
