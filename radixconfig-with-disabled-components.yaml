@@ -1,0 +1,76 @@
+apiVersion: radix.equinor.com/v1
+kind: RadixApplication
+metadata:
+  name: radix-mini-app
+spec:
+  build:
+    variables:
+      VAR1: val1
+  environments:
+    - name: dev
+      build:
+        from: main
+        variables:
+          VAR1: val1dev
+          VAR2: val2
+    - name: comps1
+      build:
+        from: main
+    - name: comps2
+      build:
+        from: main
+    - name: comps3
+      build:
+        from: main
+  components:
+    - name: server
+      image: nginxinc/nginx-unprivileged:1.22-alpine
+      ports:
+        - name: http
+          port: 8080
+      publicPort: http
+      authentication:
+        oauth2:
+          clientId: 7ef841f8-a263-45ea-8993-683cc6817ae2
+    - name: server2
+      image: nginxinc/nginx-unprivileged:1.22-alpine
+      ports:
+        - name: http
+          port: 8080
+      publicPort: http
+      authentication:
+        oauth2:
+          clientId: 7ef841f8-a263-45ea-8993-683cc6817ae2
+      environmentConfig:
+        - name: comps2
+          enabled: false
+    - name: server3
+      image: nginxinc/nginx-unprivileged:1.22-alpine
+      ports:
+        - name: http
+          port: 8080
+      publicPort: http
+      authentication:
+        oauth2:
+          clientId: 7ef841f8-a263-45ea-8993-683cc6817ae2
+      environmentConfig:
+        - name: comps2
+          enabled: false
+        - name: comps3
+          enabled: false
+    - name: server4
+      image: nginxinc/nginx-unprivileged:1.22-alpine
+      ports:
+        - name: http
+          port: 8080
+      publicPort: http
+      authentication:
+        oauth2:
+          clientId: 7ef841f8-a263-45ea-8993-683cc6817ae2
+      environmentConfig:
+        - name: dev
+          enabled: false
+        - name: comps2
+          enabled: false
+        - name: comps3
+          enabled: false
