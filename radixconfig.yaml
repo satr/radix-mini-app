@@ -27,8 +27,8 @@ spec:
       publicPort: http
       secrets:
         - A
-        - B
       variables:
+        B: aaa
         C: aa
       authentication:
         oauth2:
