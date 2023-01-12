@@ -38,7 +38,3 @@ spec:
         requests:
           memory: "640000Mi"
           cpu: "50m"
-  jobs:
-    - name: server
-      image: nginxinc/nginx-unprivileged:1.22-alpine
-      schedulerPort: 8080
