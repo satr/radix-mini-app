@@ -38,3 +38,4 @@ spec:
         requests:
           memory: "640000Mi"
           cpu: "50m"
+ 
