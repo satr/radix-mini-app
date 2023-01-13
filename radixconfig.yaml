@@ -16,7 +16,7 @@ spec:
     - name: prod
       build:
         from: release
-        variables:
+        variables: 
           VAR3: val3
     - name: a1
     - name: a2
