@@ -7,7 +7,7 @@ spec:
     variables:
       VAR1: val1
   environments:
-    - name: dev
+    - name: dev 
       build:
         from: main
         variables:
