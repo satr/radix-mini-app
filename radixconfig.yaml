@@ -2,6 +2,9 @@ apiVersion: radix.equinor.com/v1
 kind: RadixApplication
 metadata:
   name: radix-mini-app
+build:
+  secrets:
+    - CONNECTION_STRING
 spec:
   build:
     variables:
