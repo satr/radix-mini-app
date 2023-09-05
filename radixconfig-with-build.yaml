@@ -3,8 +3,7 @@ kind: RadixApplication
 metadata:
   name: radix-mini-app
 build:
-  secrets:
-    - CONNECTION_STRING
+  useBuildKit: true
 spec:
   environments:
     - name: dev
