@@ -12,6 +12,9 @@ spec:
     - name: dev2
       build:
         from: main
+    - name: dev3
+      build:
+        from: v\d+
   components:
     - name: server
       ports:
