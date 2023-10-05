@@ -11,7 +11,7 @@ spec:
         from: main
     - name: dev2
       build:
-        from: main
+        from: catalog-v*
     - name: dev3
       build:
         from: v\d+
