@@ -14,7 +14,7 @@ spec:
         from: catalog-v*
     - name: dev3
       build:
-        from: catalog-v*
+        from: abc
   components:
     - name: server
       ports:
