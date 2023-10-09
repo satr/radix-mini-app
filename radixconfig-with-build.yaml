@@ -26,6 +26,6 @@ spec:
           clientId: 7ef841f8-a263-45ea-8993-683cc6817ae2
   dnsExternalAlias:
     - alias: radix-test.equinor.com
-      environment: dev
+      environment: dev2
       component: server
 
