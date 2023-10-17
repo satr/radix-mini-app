@@ -28,6 +28,6 @@ spec:
         - SECRET1
   dnsExternalAlias:
     - alias: radix-test.equinor.com
-      environment: dev2
+      environment: dev2 
       component: server
 
