@@ -1,8 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/equinor/radix-operator/release/json-schema/radixapplication.json
 apiVersion: radix.equinor.com/v1
 kind: RadixApplication
 metadata:
   name: radix-mini-app
 build:
+  useBuildKit: true
+  useBuildCache: true
   secrets:
     - CONNECTION_STRING
 spec:
