@@ -19,7 +19,7 @@ spec:
   dnsAlias:
     - component: server
       environment: dev
-      domain: my-app
+      domain: myapp
     
   components:
     - name: server
