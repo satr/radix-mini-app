@@ -15,7 +15,7 @@ spec:
         from: catalog-v*
     - name: dev3
       build:
-        from: abcdddddf
+        from: abcdddddfd
   dnsAlias:
     - alias: myapp
       component: server
