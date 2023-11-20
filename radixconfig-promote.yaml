@@ -14,7 +14,7 @@ spec:
     - name: prod
   components:
     - name: server
-      image: nginxinc/nginx-unprivileged:{imageTagName}
+      image: nginxinc/nginx-unprivileged:
       environmentConfig:
         - environment: dev
           imageTagName: 1.22-alpine
