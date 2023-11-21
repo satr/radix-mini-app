@@ -17,12 +17,12 @@ spec:
       build:
         from: abcdddddfd
   dnsAlias:
-    - alias: myapp
-      component: server
-      environment: dev
-    - alias: myapp5
-      component: server
-      environment: dev
+#    - alias: myapp
+#      component: server
+#      environment: dev
+#    - alias: myapp5
+#      component: server
+#      environment: dev
 
   components:
     - name: server
