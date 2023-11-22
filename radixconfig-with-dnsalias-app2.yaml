@@ -33,7 +33,7 @@ spec:
       environmentConfig:
         - environment: dev
           enabled: false
-        - environment: dev
+        - environment: dev2
           enabled: true
     - name: server2
       ports:
