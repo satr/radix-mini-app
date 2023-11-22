@@ -30,4 +30,17 @@ spec:
       authentication:
         oauth2:
           clientId: 7ef841f8-a263-45ea-8993-683cc6817ae2
+      environmentConfig:
+        - environment: dev
+          enabled: false
+        - environment: dev
+          enabled: true
+    - name: server2
+      ports:
+        - name: http1
+          port: 8080
+      publicPort: http1
+      authentication:
+        oauth2:
+          clientId: 7ef841f8-a263-45ea-8993-683cc6817ae2
 
