@@ -19,7 +19,7 @@ spec:
       environment: dev2
     - alias: myapp3
       component: server
-      environment: dev2
+      environment: dev
 
   components:
     - name: server
