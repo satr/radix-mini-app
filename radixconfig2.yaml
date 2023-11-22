@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/equinor/radix-operator/release/json-schema/radixapplication.json
+apiVersion: radix.equinor.com/v1
+kind: RadixApplication
+metadata:
+  name: radix-mini-app2
+build:
+  useBuildKit: true
+  useBuildCache: true
+spec:
+  environments:
+    - name: dev
+      build:
+        from: main
+    - name: dev2
+      build:
+        from: main
+    - name: dev3
+      build:
+        from: main
+    - name: dev4
+      build:
+        from: main
+    - name: dev5
+      build:
+        from: main
+  components:
+    - name: server
+      image: nginxinc/nginx-unprivileged:1.22-alpine
+      ports:
+        - name: http
+          port: 8080
+      publicPort: http
+      authentication:
+        oauth2:
+          clientId: 7ef841f8-a263-45ea-8993-683cc6817ae2
