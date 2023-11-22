@@ -32,7 +32,7 @@ spec:
           clientId: 7ef841f8-a263-45ea-8993-683cc6817ae2
       environmentConfig:
         - environment: dev
-          enabled: false
+          enabled: true
         - environment: dev2
           enabled: true
     - name: server2
