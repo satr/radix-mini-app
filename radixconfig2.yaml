@@ -14,12 +14,12 @@ spec:
       build:
         from: main
   dnsAlias:
-#    - alias: myapp3
-#      component: server2
-#      environment: dev
-#    - alias: myapp1
-#      component: server
-#      environment: dev
+    - alias: myapp3
+      component: server2
+      environment: dev
+    - alias: myapp1
+      component: server
+      environment: dev
 
   components:
     - name: server
