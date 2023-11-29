@@ -14,10 +14,10 @@ spec:
       build:
         from: main
   dnsAlias:
-    - alias: myapp6
+    - alias: api
       component: server
       environment: dev2
-    - alias: myapp1
+    - alias: console
       component: server
       environment: dev
 
