@@ -13,13 +13,13 @@ spec:
     - name: dev2
       build:
         from: main
-#  dnsAlias:
-#    - alias: myapp3
-#      component: server
-#      environment: dev2
-#    - alias: myapp1
-#      component: server
-#      environment: dev2
+  dnsAlias:
+    - alias: myapp3
+      component: server
+      environment: dev2
+    - alias: myapp1
+      component: server
+      environment: dev2
 
   components:
     - name: server
