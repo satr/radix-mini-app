@@ -14,7 +14,7 @@ spec:
       build:
         from: main
   dnsAlias:
-    - alias: myapp3
+    - alias: myapp6
       component: server
       environment: dev2
     - alias: myapp1
