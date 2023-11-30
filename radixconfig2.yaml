@@ -14,7 +14,7 @@ spec:
       build:
         from: main
   dnsAlias:
-    - alias: server2-radix-mini-app2-dev2
+    - alias: server-radix-mini-app2-dev3
       component: server
       environment: dev
     - alias: myapp1-2
