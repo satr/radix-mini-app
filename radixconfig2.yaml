@@ -14,7 +14,7 @@ spec:
       build:
         from: main
   dnsAlias:
-    - alias: www-radix-canary-golang-prod
+    - alias: server2-radix-mini-app2-dev2
       component: server
       environment: dev
     - alias: myapp1-2
