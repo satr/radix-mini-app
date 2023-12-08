@@ -44,6 +44,7 @@ spec:
         - environment: dev2
           enabled: true
     - name: server2
+      src: server2
       ports:
         - name: http1
           port: 8080
