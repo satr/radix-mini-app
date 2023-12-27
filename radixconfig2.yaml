@@ -17,15 +17,15 @@ spec:
     - alias: server1-1
       component: server
       environment: dev
-    - alias: myapp1-2
-      component: server2
-      environment: dev
-#    - alias: myapp2-1
-#      component: server
-#      environment: dev2
-#    - alias: myapp2-2
+#    - alias: myapp1-2
 #      component: server2
-#      environment: dev2
+#      environment: dev
+    - alias: myapp2-1
+      component: server
+      environment: dev2
+    - alias: myapp2-2
+      component: server2
+      environment: dev2
 
   dnsAppAlias:
     environment: dev
