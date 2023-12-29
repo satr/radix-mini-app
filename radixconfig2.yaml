@@ -17,12 +17,12 @@ spec:
     - alias: server1-1
       component: server
       environment: dev2
-    - alias: myapp1-2
-      component: server2
-      environment: dev
-    - alias: myapp2-1
-      component: server
-      environment: dev
+#    - alias: myapp1-2
+#      component: server2
+#      environment: dev
+#    - alias: myapp2-1
+#      component: server
+#      environment: dev
     - alias: myapp2-2
       component: server2
       environment: dev2
@@ -36,9 +36,9 @@ spec:
         - name: http1
           port: 8080
       publicPort: http1
-      authentication:
-        oauth2:
-          clientId: 7ef841f8-a263-45ea-8993-683cc6817ae2
+#      authentication:
+#        oauth2:
+#          clientId: 7ef841f8-a263-45ea-8993-683cc6817ae2
       environmentConfig:
         - environment: dev
           enabled: true
