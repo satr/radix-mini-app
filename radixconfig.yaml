@@ -27,10 +27,10 @@ spec:
   components:
     - name: server
       image: nginxinc/nginx-unprivileged:1.22-alpine
-      ports:
-        - name: http
-          port: 8080
-      publicPort: http
+#      ports:
+#        - name: http
+#          port: 8080
+#      publicPort: http
       secrets:
         - A
       variables:
