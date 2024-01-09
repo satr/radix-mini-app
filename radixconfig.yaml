@@ -47,19 +47,21 @@ spec:
 #        oauth2:
 #          clientId: 7ef841f8-a263-45ea-8993-683cc6817ae2
     - name: server2
-      src: server2
+      image: nginxinc/nginx-unprivileged:1.22-alpine
       resources:
         requests:
           memory: 100Mi
           cpu: 100m
     - name: server3
-      src: server3
+      image: nginxinc/nginx-unprivileged:1.22-alpine
       resources:
         requests:
-          memory: 100Mi
           cpu: 100m
+        limits:
+          memory: 200Mi
+          cpu: 200m
     - name: server4
-      src: server4
+      image: nginxinc/nginx-unprivileged:1.22-alpine
       resources:
         limits:
           memory: 200Mi
