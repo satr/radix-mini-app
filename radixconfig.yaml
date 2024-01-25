@@ -18,7 +18,7 @@ spec:
   - name: server
     image: nginxinc/nginx-unprivileged:1.22-alpine
   - name: server2
-    image: nginxinc/nginx-unprivileged:1.22-alpine
+    src: ./server2
   - name: server3
     image: nginxinc/nginx-unprivileged:1.22-alpine
   - name: server4
