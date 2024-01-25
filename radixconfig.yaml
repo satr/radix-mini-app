@@ -6,63 +6,20 @@ metadata:
 build:
   useBuildKit: true
   useBuildCache: true
-  secrets:
-    - CONNECTION_STRING
 spec:
-  build:
-    variables:
-      VAR1: val1
   environments:
-    - name: dev
-      build:
-        from: main
-        variables:
-          VAR1: val1dev
-          VAR2: val2
-    - name: prod
-      build:
-        from: release
-        variables:
-          VAR3: val3
+  - name: dev
+    build:
+      from: main
+  - name: prod
+    build:
+      from: release
   components:
-    - name: server
-      image: nginxinc/nginx-unprivileged:1.22-alpine
-#      ports:
-#        - name: http
-#          port: 8080
-#      publicPort: http
-      resources:
-        requests:
-          memory: 100Mi
-          cpu: 100m
-        limits:
-          memory: 200Mi
-          cpu: 200m
-      secrets:
-        - A
-      variables:
-        B: aaa
-        C: aa
-#      authentication:
-#        oauth2:
-#          clientId: 7ef841f8-a263-45ea-8993-683cc6817ae2
-    - name: server2
-      image: nginxinc/nginx-unprivileged:1.22-alpine
-      resources:
-        requests:
-          memory: 100Mi
-          cpu: 100m
-    - name: server3
-      image: nginxinc/nginx-unprivileged:1.22-alpine
-      resources:
-        requests:
-          cpu: 100m
-        limits:
-          memory: 200Mi
-          cpu: 200m
-    - name: server4
-      image: nginxinc/nginx-unprivileged:1.22-alpine
-      resources:
-        limits:
-          memory: 200Mi
-          cpu: 200m
+  - name: server
+    image: nginxinc/nginx-unprivileged:1.22-alpine
+  - name: server2
+    image: nginxinc/nginx-unprivileged:1.22-alpine
+  - name: server3
+    image: nginxinc/nginx-unprivileged:1.22-alpine
+  - name: server4
+    image: nginxinc/nginx-unprivileged:1.22-alpine
