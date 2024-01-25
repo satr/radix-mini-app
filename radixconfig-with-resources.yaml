@@ -4,11 +4,6 @@ apiVersion: radix.equinor.com/v1
 kind: RadixApplication
 metadata:
   name: radix-mini-app
-build:
-  useBuildKit: true
-  useBuildCache: true
-  secrets:
-  - CONNECTION_STRING
 spec:
   build:
     variables:

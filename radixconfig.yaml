@@ -3,10 +3,10 @@ apiVersion: radix.equinor.com/v1
 kind: RadixApplication
 metadata:
   name: radix-mini-app
-build:
-  useBuildKit: true
-  useBuildCache: true
 spec:
+  build:
+    useBuildKit: true
+    useBuildCache: true
   environments:
   - name: dev
     build:
