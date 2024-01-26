@@ -1,0 +1,20 @@
+FROM docker.io/nginxinc/nginx-unprivileged:1.22-alpine
+
+RUN echo "***************** server2 Dockerfile ******************"
+
+ARG RADIX_GIT_COMMIT_HASH
+ARG RADIX_GIT_TAGS
+ARG BRANCH
+ARG TARGET_ENVIRONMENTS
+
+RUN echo "RADIX_GIT_COMMIT_HASH: $RADIX_GIT_COMMIT_HASH"
+RUN echo "RADIX_GIT_TAGS: $RADIX_GIT_TAGS"
+RUN echo "BRANCH: $BRANCH"
+RUN echo "TARGET_ENVIRONMENTS: $TARGET_ENVIRONMENTS"
+
+RUN echo "***************** server2 Dockerfile ******************"
+
+COPY ./server.conf /etc/nginx/conf.d/default.conf
+
+WORKDIR /app
+COPY index.html .

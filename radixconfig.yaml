@@ -19,6 +19,7 @@ spec:
     image: nginxinc/nginx-unprivileged:1.22-alpine
   - name: server2
     src: ./server2
+    dockerfileName: Dockerfile.legacy
   - name: server3
     image: nginxinc/nginx-unprivileged:1.22-alpine
   - name: server4
