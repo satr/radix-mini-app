@@ -4,6 +4,9 @@ kind: RadixApplication
 metadata:
   name: radix-mini-app
 spec:
+  build:
+    useBuildKit: true
+    useBuildCache: true
   environments:
   - name: dev
     build:
