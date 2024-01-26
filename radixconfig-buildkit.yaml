@@ -2,7 +2,7 @@
 apiVersion: radix.equinor.com/v1
 kind: RadixApplication
 metadata:
-  name: radix-mini-app
+  name: radix-mini-app-buildkit
 spec:
   build:
     useBuildKit: true
