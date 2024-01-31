@@ -1,0 +1,67 @@
+apiVersion: radix.equinor.com/v1
+kind: RadixApplication
+metadata:
+  name: radix-mini-app2
+spec:
+  build:
+    useBuildKit: true
+    useBuildCache: true
+  environments:
+    - name: dev1
+      build:
+        from: main
+    - name: dev2
+      build:
+        from: main
+    - name: dev3
+      build:
+        from: main
+    - name: dev4
+      build:
+        from: main
+  components:
+    - name: component-1
+      src: ./server
+      dockerfileName: Dockerfile2
+      environmentConfig:
+        - environment: dev1
+        - environment: dev2
+          src: ./server2
+        - environment: dev3
+          src: ./server
+          dockerfileName: Dockerfile
+        - environment: dev4
+          image: nginxinc/nginx-unprivileged:1-alpine3.18-perl
+    - name: component-2
+      dockerfileName: Dockerfile2
+      environmentConfig:
+        - environment: dev1
+        - environment: dev2
+          src: ./server2
+        - environment: dev3
+          src: ./server
+          dockerfileName: Dockerfile
+        - environment: dev4
+          image: nginxinc/nginx-unprivileged:mainline-alpine3.18-perl
+    - name: component-3
+      src: ./server
+      environmentConfig:
+        - environment: dev1
+        - environment: dev2
+          src: ./server2
+        - environment: dev3
+          src: ./server
+          dockerfileName: Dockerfile
+        - environment: dev4
+          image: nginxinc/nginx-unprivileged:alpine-perl
+    - name: component-4
+      image: nginxinc/nginx-unprivileged:1.22-alpine
+      environmentConfig:
+        - environment: dev1
+        - environment: dev2
+          src: ./server2
+        - environment: dev3
+          src: ./server
+          dockerfileName: Dockerfile
+        - environment: dev4
+          image: nginxinc/nginx-unprivileged:alpine3.18-perl
