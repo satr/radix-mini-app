@@ -30,6 +30,9 @@ spec:
     environmentConfig:
       - environment: qa
         image: nginxinc/nginx-unprivileged:mainline-alpine-perl
+      - environment: prod
+        src: ./server2
+        dockerfileName: Dockerfile2
   - name: server3
     image: nginxinc/nginx-unprivileged:1.22-alpine
     environmentConfig:
