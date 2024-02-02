@@ -19,7 +19,9 @@ spec:
       from: release
   components:
   - name: server
-    image: nginxinc/nginx-unprivileged:1.22-alpine
+    src: ./server2
+    dockerfileName: Dockerfile.legacy
+#    image: nginxinc/nginx-unprivileged:1.22-alpine
     environmentConfig:
       - environment: dev
         src: ./server2
