@@ -4,6 +4,9 @@ kind: RadixApplication
 metadata:
   name: radix-mini-app
 spec:
+  build:
+    useBuildKit: true
+    useBuildCache: true
   environments:
   - name: dev
     build:
@@ -17,6 +20,10 @@ spec:
   components:
   - name: server
     image: nginxinc/nginx-unprivileged:1.22-alpine
+    environmentConfig:
+      - environment: qa
+        src: ./server2
+        dockerfileName: Dockerfile.legacy
   - name: server2
     src: ./server2
     dockerfileName: Dockerfile.legacy
