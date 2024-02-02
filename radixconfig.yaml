@@ -27,7 +27,16 @@ spec:
   - name: server2
     src: ./server2
     dockerfileName: Dockerfile.legacy
+    environmentConfig:
+      - environment: qa
+        image: nginxinc/nginx-unprivileged:mainline-alpine-perl
   - name: server3
     image: nginxinc/nginx-unprivileged:1.22-alpine
+    environmentConfig:
+      - environment: dev
+        image: nginxinc/nginx-unprivileged:mainline-alpine-perl
   - name: server4
     image: nginxinc/nginx-unprivileged:1.22-alpine
+    environmentConfig:
+      - environment: dev
+        image: ""
