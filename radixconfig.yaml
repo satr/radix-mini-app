@@ -20,7 +20,7 @@ spec:
   components:
   - name: server
     src: ./server2
-    dockerfileName: Dockerfile.legacy2
+    dockerfileName: Dockerfile.legacy222
 #    image: nginxinc/nginx-unprivileged:1.22-alpine
     environmentConfig:
       - environment: dev
