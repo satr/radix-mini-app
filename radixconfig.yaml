@@ -21,7 +21,7 @@ spec:
   - name: server
     image: nginxinc/nginx-unprivileged:1.22-alpine
     environmentConfig:
-      - environment: qa
+      - environment: dev
         src: ./server2
         dockerfileName: Dockerfile.legacy
   - name: server2
