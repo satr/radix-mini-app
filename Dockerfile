@@ -12,4 +12,4 @@ RUN echo "***************** root Dockerfile ******************"
 COPY ./server/server.conf /etc/nginx/conf.d/default.conf
 
 WORKDIR /app
-COPY index.html .
+COPY ./server/index.html .
