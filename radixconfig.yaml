@@ -19,16 +19,17 @@ spec:
       from: release
   components:
   - name: server
-    src: ./server2
-    dockerfileName: Dockerfile.legacy222
-#    image: nginxinc/nginx-unprivileged:1.22-alpine
+#    src: ./server2
+#    dockerfileName: Dockerfile.legacy222
+    image: nginxinc/nginx-unprivileged:1.22-alpine
     environmentConfig:
       - environment: dev
         src: ./server2
         dockerfileName: Dockerfile.legacy
   - name: server2
     src: ./server2
-    dockerfileName: Dockerfile.legacy
+#    dockerfileName: Dockerfile.legacy
+    image: nginxinc/nginx-unprivileged:1.22-alpine
     environmentConfig:
       - environment: qa
         image: nginxinc/nginx-unprivileged:mainline-alpine-perl
