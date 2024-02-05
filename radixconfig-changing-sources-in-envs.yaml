@@ -28,4 +28,4 @@ spec:
     src: ./
     dockerfileName: Dockerfile
   - name: server4
-    image: nginxinc/nginx-unprivileged:alpine3.18-perl
+    image: nginxinc/nginx-unprivileged:1.22-alpine
