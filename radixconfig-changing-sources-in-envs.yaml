@@ -21,11 +21,21 @@ spec:
   - name: server
     src: ./server
     dockerfileName: Dockerfile
+    environmentConfig:
+      - environment: qa
+        image: nginxinc/nginx-unprivileged:1.22-alpine
   - name: server2
     src: ./server2
     dockerfileName: Dockerfile
+    environmentConfig:
+      - environment: qa
+        src: ./server
+        dockerfileName: Dockerfile2
   - name: server3
     src: ./
     dockerfileName: Dockerfile
+    environmentConfig:
+      - environment: qa
+        image: nginxinc/nginx-unprivileged:1.22-alpine
   - name: server4
     image: nginxinc/nginx-unprivileged:1.22-alpine
