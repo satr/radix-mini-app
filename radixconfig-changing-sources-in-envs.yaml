@@ -38,4 +38,12 @@ spec:
       - environment: qa
         image: nginxinc/nginx-unprivileged:1.22-alpine
   - name: server4
-    image: nginxinc/nginx-unprivileged:1.22-alpine
+    image: nginxinc/nginx-unprivileged:{imageTagName}
+    environmentConfig:
+      - environment: dev
+        imageTagName: alpine-perl
+      - environment: qa
+        src: ./server
+        dockerfileName: Dockerfile2
+      - environment: prod
+        imageTagName: alpine3.18-perl
