@@ -24,6 +24,8 @@ spec:
     environmentConfig:
       - environment: qa
         image: nginxinc/nginx-unprivileged:1.22-alpine
+      - environment: prod
+        image: nginxinc/nginx-unprivileged:alpine3.18-perl
   - name: server2
     src: ./server2
     dockerfileName: Dockerfile
@@ -31,12 +33,16 @@ spec:
       - environment: qa
         src: ./server
         dockerfileName: Dockerfile2
+      - environment: prod
+        image: nginxinc/nginx-unprivileged:alpine3.18-perl
   - name: server3
     src: ./
     dockerfileName: Dockerfile
     environmentConfig:
       - environment: qa
         image: nginxinc/nginx-unprivileged:1.22-alpine
+      - environment: prod
+        image: nginxinc/nginx-unprivileged:alpine3.18-perl
   - name: server4
     image: nginxinc/nginx-unprivileged:{imageTagName}
     environmentConfig:
