@@ -8,7 +8,7 @@ WORKDIR /app
 COPY ./src/ .
 # If you're using Yarn, uncomment the next line and comment out the npm install line
 # COPY yarn.lock ./
-
+RUN apk update && apk add --no-cache tini
 # Install dependencies
 RUN npm install
 RUN npm ci --omit=dev
@@ -36,6 +36,7 @@ RUN npm run build
 # Expose the port Next.js runs on
 EXPOSE 3000
 USER 1000
+ENTRYPOINT ["/sbin/tini", "--"]
 # Command to run the app
 CMD ["npm", "start"]
 # If you're using Yarn, uncomment the next line and comment out the npm start line
