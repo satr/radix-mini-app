@@ -16,4 +16,4 @@ spec:
     src: ./web-app
     ports:
       - name: "http"
-        port: 8080
+        port: 3000
