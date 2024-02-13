@@ -12,8 +12,10 @@ spec:
     build:
       from: main
   components:
-  - name: web-app
+  - name: web-app1
     src: ./web-app
     ports:
       - name: "http"
         port: 3000
+    variables:
+      NODE_ENV: 'production'
