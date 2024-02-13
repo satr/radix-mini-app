@@ -35,7 +35,7 @@ COPY --from=builder /app/node_modules ./node_modules
 
 # Expose the port Next.js runs on
 EXPOSE 3000
-
+USER 1000
 # Command to run the app
 CMD ["npm", "start"]
 # If you're using Yarn, uncomment the next line and comment out the npm start line
