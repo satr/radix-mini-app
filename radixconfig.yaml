@@ -5,44 +5,13 @@ metadata:
   name: radix-mini-app
 spec:
   build:
-    useBuildKit: true
-    useBuildCache: true
+#    useBuildKit: true
+#    useBuildCache: true
   environments:
   - name: dev
     build:
       from: main
-  - name: qa
-    build:
-      from: main
-  - name: prod
-    build:
-      from: release
   components:
   - name: server
-#    src: ./server2
-#    dockerfileName: Dockerfile.legacy222
-    image: nginxinc/nginx-unprivileged:1.22-alpine
-    environmentConfig:
-      - environment: dev
-        src: ./server2
-        dockerfileName: Dockerfile.legacy
-  - name: server2
     src: ./server2
-#    dockerfileName: Dockerfile.legacy
-    image: nginxinc/nginx-unprivileged:1.22-alpine
-    environmentConfig:
-      - environment: qa
-        image: nginxinc/nginx-unprivileged:mainline-alpine-perl
-      - environment: prod
-        src: ./server2
-        dockerfileName: Dockerfile2
-  - name: server3
-    image: nginxinc/nginx-unprivileged:1.22-alpine
-    environmentConfig:
-      - environment: dev
-        image: nginxinc/nginx-unprivileged:mainline-alpine-perl
-  - name: server4
-    image: nginxinc/nginx-unprivileged:1.22-alpine
-    environmentConfig:
-      - environment: dev
-        image: ""
+    dockerfileName: Dockerfile.legacy
