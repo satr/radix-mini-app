@@ -13,7 +13,8 @@ spec:
       from: main
   components:
   - name: web-app-abc
-    Dockerfile: ./Dockerfile.web-app2
+    src: .
+    dockerfileName: Dockerfile.web-app2
     ports:
       - name: "http"
         port: 3000
