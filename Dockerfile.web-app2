@@ -1,0 +1,22 @@
+# Step 1: Build the Next.js app
+FROM docker.io/node:alpine as builder
+
+# Set the working directory in the container
+WORKDIR /app
+
+COPY ./web-app2/ .
+
+RUN apk update && apk add --no-cache tini
+
+RUN npm install
+RUN npm ci --omit=dev
+
+# Build your Next.js app
+RUN npm run build
+
+# Expose the port Next.js runs on
+EXPOSE 3000
+USER 1000
+#ENTRYPOINT ["/sbin/tini", "--"]
+# Command to run the app
+CMD ["npm", "start"]
