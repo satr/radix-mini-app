@@ -6,13 +6,13 @@ metadata:
 spec:
   build:
     useBuildKit: true
-    useBuildCache: true
+    useBuildCache: false
   environments:
   - name: dev2
     build:
       from: main
   components:
-  - name: web-app1
+  - name: web-app-abc
     Dockerfile: ./Dockerfile.web-app2
     ports:
       - name: "http"
