@@ -6,7 +6,7 @@ metadata:
 spec:
   build:
     useBuildKit: true
-    useBuildCache: false
+    useBuildCache: true
   environments:
   - name: dev2
     build:

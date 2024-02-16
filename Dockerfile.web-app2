@@ -17,6 +17,6 @@ RUN npm run build
 # Expose the port Next.js runs on
 EXPOSE 3000
 USER 1000
-#ENTRYPOINT ["/sbin/tini", "--"]
+ENTRYPOINT ["/sbin/tini", "--"]
 # Command to run the app
 CMD ["npm", "start"]
