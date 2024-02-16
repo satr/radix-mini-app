@@ -8,7 +8,7 @@ spec:
     useBuildKit: true
     useBuildCache: true
   environments:
-  - name: dev
+  - name: dev2
     build:
       from: main
   components:
