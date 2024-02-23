@@ -13,5 +13,6 @@ spec:
       from: main
   components:
   - name: server
-    src: ./server2
-    dockerfileName: Dockerfile.legacy
+    image: nginxinc/nginx-unprivileged:1.22-alpine
+    # src: ./server2
+    # dockerfileName: Dockerfile.legacy
