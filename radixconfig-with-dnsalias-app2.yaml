@@ -23,6 +23,9 @@ spec:
     - alias: myapp2
       component: server
       environment: dev
+    - alias: myapp22
+      component: server
+      environment: dev
   dnsExternalAlias:
     - alias: some.alias.com
       environment: dev2
@@ -33,6 +36,12 @@ spec:
     - alias: another.alias.com
       environment: dev
       component: server2
+    - alias: another1.alias.com
+      environment: dev
+      component: server
+    - alias: another2.alias.com
+      environment: dev
+      component: server
   dnsAppAlias:
     environment: dev
     component: server2
