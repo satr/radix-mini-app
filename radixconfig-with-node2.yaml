@@ -1,0 +1,194 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/equinor/radix-operator/release/json-schema/radixapplication.json
+apiVersion: radix.equinor.com/v1
+kind: RadixApplication
+metadata:
+  name: radix-mini-app-with-node
+spec:
+  build:
+    useBuildKit: true
+    useBuildCache: true
+  environments:
+  - name: dev2
+    build:
+      from: main
+  components:
+  - name: web-app-abc
+    src: .
+    dockerfileName: Dockerfile.web-app2
+    ports:
+      - name: "http"
+        port: 3000
+    publicPort: "http"
+    variables:
+      NODE_ENV: 'production'
+  - name: web-app-abc
+    src: .
+    dockerfileName: Dockerfile.web-app2
+    ports:
+      - name: "http"
+        port: 3000
+    publicPort: "http"
+    variables:
+      NODE_ENV: 'production'
+  - name: web-app-abc
+    src: .
+    dockerfileName: Dockerfile.web-app2
+    ports:
+      - name: "http"
+        port: 3000
+    publicPort: "http"
+    variables:
+      NODE_ENV: 'production'
+  - name: web-app-abc
+    src: .
+    dockerfileName: Dockerfile.web-app2
+    ports:
+      - name: "http"
+        port: 3000
+    publicPort: "http"
+    variables:
+      NODE_ENV: 'production'
+  - name: web-app-abc
+    src: .
+    dockerfileName: Dockerfile.web-app2
+    ports:
+      - name: "http"
+        port: 3000
+    publicPort: "http"
+    variables:
+      NODE_ENV: 'production'
+  - name: web-app-abc
+    src: .
+    dockerfileName: Dockerfile.web-app2
+    ports:
+      - name: "http"
+        port: 3000
+    publicPort: "http"
+    variables:
+      NODE_ENV: 'production'
+  - name: web-app-abc
+    src: .
+    dockerfileName: Dockerfile.web-app2
+    ports:
+      - name: "http"
+        port: 3000
+    publicPort: "http"
+    variables:
+      NODE_ENV: 'production'
+  - name: web-app-abc
+    src: .
+    dockerfileName: Dockerfile.web-app2
+    ports:
+      - name: "http"
+        port: 3000
+    publicPort: "http"
+    variables:
+      NODE_ENV: 'production'
+  - name: web-app-abc
+    src: .
+    dockerfileName: Dockerfile.web-app2
+    ports:
+      - name: "http"
+        port: 3000
+    publicPort: "http"
+    variables:
+      NODE_ENV: 'production'
+  - name: web-app-abc
+    src: .
+    dockerfileName: Dockerfile.web-app2
+    ports:
+      - name: "http"
+        port: 3000
+    publicPort: "http"
+    variables:
+      NODE_ENV: 'production'
+  - name: web-app-abc
+    src: .
+    dockerfileName: Dockerfile.web-app2
+    ports:
+      - name: "http"
+        port: 3000
+    publicPort: "http"
+    variables:
+      NODE_ENV: 'production'
+  - name: web-app-abc
+    src: .
+    dockerfileName: Dockerfile.web-app2
+    ports:
+      - name: "http"
+        port: 3000
+    publicPort: "http"
+    variables:
+      NODE_ENV: 'production'
+  - name: web-app-abc
+    src: .
+    dockerfileName: Dockerfile.web-app2
+    ports:
+      - name: "http"
+        port: 3000
+    publicPort: "http"
+    variables:
+      NODE_ENV: 'production'
+  - name: web-app-abc
+    src: .
+    dockerfileName: Dockerfile.web-app2
+    ports:
+      - name: "http"
+        port: 3000
+    publicPort: "http"
+    variables:
+      NODE_ENV: 'production'
+  - name: web-app-abc
+    src: .
+    dockerfileName: Dockerfile.web-app2
+    ports:
+      - name: "http"
+        port: 3000
+    publicPort: "http"
+    variables:
+      NODE_ENV: 'production'
+  - name: web-app-abc
+    src: .
+    dockerfileName: Dockerfile.web-app2
+    ports:
+      - name: "http"
+        port: 3000
+    publicPort: "http"
+    variables:
+      NODE_ENV: 'production'
+  - name: web-app-abc
+    src: .
+    dockerfileName: Dockerfile.web-app2
+    ports:
+      - name: "http"
+        port: 3000
+    publicPort: "http"
+    variables:
+      NODE_ENV: 'production'
+  - name: web-app-abc
+    src: .
+    dockerfileName: Dockerfile.web-app2
+    ports:
+      - name: "http"
+        port: 3000
+    publicPort: "http"
+    variables:
+      NODE_ENV: 'production'
+  - name: web-app-abc
+    src: .
+    dockerfileName: Dockerfile.web-app2
+    ports:
+      - name: "http"
+        port: 3000
+    publicPort: "http"
+    variables:
+      NODE_ENV: 'production'
+  - name: web-app-abc
+    src: .
+    dockerfileName: Dockerfile.web-app2
+    ports:
+      - name: "http"
+        port: 3000
+    publicPort: "http"
+    variables:
+      NODE_ENV: 'production'

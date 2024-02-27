@@ -17,10 +17,19 @@ spec:
     - alias: myapp3
       component: server
       environment: dev2
-#    - alias: myapp1
-#      component: server2
-#      environment: dev
-
+    - alias: myapp1
+      component: server2
+      environment: dev
+  dnsExternalAlias:
+    - alias: some.alias.com
+      environment: dev2
+      component: server
+    - alias: another.alias.com
+      environment: dev
+      component: server2
+  dnsAppAlias:
+    environment: dev
+    component: server2
   components:
     - name: server
       ports:
