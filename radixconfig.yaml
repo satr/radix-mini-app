@@ -28,6 +28,10 @@ spec:
       environment: dev
   components:
   - name: server
+    ports:
+      - name: http
+        port: 8080
+    publicPort: http
     image: nginxinc/nginx-unprivileged:1.22-alpine
     # src: ./server2
     # dockerfileName: Dockerfile.legacy
