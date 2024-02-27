@@ -20,10 +20,16 @@ spec:
     - alias: myapp1
       component: server2
       environment: dev
+    - alias: myapp2
+      component: server
+      environment: dev
   dnsExternalAlias:
     - alias: some.alias.com
       environment: dev2
       component: server
+    - alias: some2.alias.com
+      environment: dev2
+      component: server2
     - alias: another.alias.com
       environment: dev
       component: server2
