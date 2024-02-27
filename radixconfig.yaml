@@ -22,6 +22,10 @@ spec:
     - alias: myapp3
       component: server
       environment: dev
+  dnsExternalAlias:
+    - alias: myapp3.equinor.com
+      component: server
+      environment: dev
   components:
   - name: server
     image: nginxinc/nginx-unprivileged:1.22-alpine
