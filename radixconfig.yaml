@@ -11,7 +11,15 @@ spec:
   - name: dev
     build:
       from: main
+  - name: dev2
+    build:
+      from: main
+  - name: dev3
+    build:
+      from: release
+  - name: dev4
   components:
   - name: server
-    src: ./server2
-    dockerfileName: Dockerfile.legacy
+    image: nginxinc/nginx-unprivileged:1.22-alpine
+    # src: ./server2
+    # dockerfileName: Dockerfile.legacy
