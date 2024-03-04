@@ -27,19 +27,19 @@ spec:
       component: server
       environment: dev
   dnsExternalAlias:
-    - alias: some.alias.com
+    - alias: some.radix.equinor.com
       environment: dev2
       component: server
-    - alias: some2.alias.com
+    - alias: some2.radix.equinor.com
       environment: dev2
       component: server2
-    - alias: another.alias.com
+    - alias: another.radix.equinor.com
       environment: dev
       component: server2
-    - alias: another1.alias.com
+    - alias: another1.radix.equinor.com
       environment: dev
       component: server
-    - alias: another2.alias.com
+    - alias: another2.radix.equinor.com
       environment: dev
       component: server
   dnsAppAlias:
