@@ -19,10 +19,10 @@ spec:
       from: release
   components:
   - name: server
-    image: nginxinc/nginx-unprivileged:1.22-alpine
+    image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
   - name: server2
     src: ./server2
   - name: server3
-    image: nginxinc/nginx-unprivileged:1.22-alpine
+    image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
   - name: server4
-    image: nginxinc/nginx-unprivileged:1.22-alpine
+    image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim

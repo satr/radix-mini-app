@@ -1,4 +1,4 @@
-FROM docker.io/nginxinc/nginx-unprivileged:1.22-alpine
+FROM docker.io/nginxinc/nginx-unprivileged:1.24.0-alpine-slim
 
 RUN echo "+++++++++++++++++ server Dockerfile2 +++++++++++++++++"
 

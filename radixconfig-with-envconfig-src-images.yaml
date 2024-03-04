@@ -55,7 +55,7 @@ spec:
         - environment: dev4
           image: nginxinc/nginx-unprivileged:alpine-perl
     - name: component-4
-      image: nginxinc/nginx-unprivileged:1.22-alpine
+      image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
       environmentConfig:
         - environment: dev1
         - environment: dev2

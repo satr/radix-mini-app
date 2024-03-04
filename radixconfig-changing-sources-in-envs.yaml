@@ -23,7 +23,7 @@ spec:
     dockerfileName: Dockerfile
     environmentConfig:
       - environment: qa
-        image: nginxinc/nginx-unprivileged:1.22-alpine
+        image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
       - environment: prod
         image: nginxinc/nginx-unprivileged:alpine3.18-perl
   - name: server2
@@ -40,7 +40,7 @@ spec:
     dockerfileName: Dockerfile
     environmentConfig:
       - environment: qa
-        image: nginxinc/nginx-unprivileged:1.22-alpine
+        image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
       - environment: prod
         image: nginxinc/nginx-unprivileged:alpine3.18-perl
   - name: server4

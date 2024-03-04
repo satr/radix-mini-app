@@ -24,7 +24,7 @@ spec:
         from: main
   components:
     - name: server
-      image: nginxinc/nginx-unprivileged:1.22-alpine
+      image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
       ports:
         - name: http
           port: 8080
@@ -38,7 +38,7 @@ spec:
         - environment: comps3
           enabled: false
     - name: server2
-      image: nginxinc/nginx-unprivileged:1.22-alpine
+      image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
       ports:
         - name: http
           port: 8080
@@ -56,7 +56,7 @@ spec:
         - environment: comps3
           enabled: false
     - name: server3
-      image: nginxinc/nginx-unprivileged:1.22-alpine
+      image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
       ports:
         - name: http
           port: 8080
@@ -74,7 +74,7 @@ spec:
         - environment: comps3
           enabled: false
     - name: server4
-      image: nginxinc/nginx-unprivileged:1.22-alpine
+      image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
       ports:
         - name: http
           port: 8080
