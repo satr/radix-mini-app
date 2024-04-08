@@ -36,7 +36,7 @@ spec:
     volumeMounts:
       - name: storage1
         path: /app/image-storage
-        type: fuse2
+        type: blobfuse2-fuse2
         container: testdata
         uid: 1000
         accessMode: ReadWriteMany
@@ -59,7 +59,7 @@ spec:
     volumeMounts:
       - name: storage1
         path: /app/image-storage
-        type: fuse2
+        type: blobfuse2-fuse2
         container: testdata
         uid: 1000
         accessMode: ReadWriteMany
@@ -83,7 +83,7 @@ spec:
         volumeMounts:
         - name: storage1
           path: /app/image-storage
-          type: fuse2
+          type: blobfuse2-fuse2
           container: testdata
           uid: 1000
           accessMode: ReadWriteMany
@@ -109,7 +109,7 @@ spec:
     volumeMounts:
       - name: storage1
         path: /app/image-storage
-        type: fuse2
+        type: blobfuse2-fuse2
         container: testdata
         uid: 1000
         accessMode: ReadWriteMany
