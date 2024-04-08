@@ -35,19 +35,19 @@ spec:
         monitoring: true
     volumeMounts:
       - name: storage1
-        path: /app/image-storage
+        path: /app/image-storage1
         type: azure-blob
         storage: testdata
         uid: 1000
         accessMode: ReadWriteMany
       - name: storage2
-        path: /app/image-storage
+        path: /app/image-storage2
         blobfuse2:
           container: testdata
           uid: 1000
           accessMode: ReadWriteMany
       - name: storage3
-        path: /app/image-storage2
+        path: /app/image-storage3a
         blobfuse2:
           container: testdata
           uid: 1000
@@ -64,13 +64,13 @@ spec:
         uid: 1000
         accessMode: ReadWriteMany
       - name: storage2
-        path: /app/image-storage
+        path: /app/image-storage2
         blobfuse2:
           container: testdata
           uid: 1000
           accessMode: ReadWriteMany
       - name: storage3
-        path: /app/image-storage2
+        path: /app/image-storage3
         blobfuse2:
           container: testdata
           uid: 1000
@@ -94,7 +94,7 @@ spec:
             uid: 1001
             accessMode: ReadOnlyMany
         - name: storage4
-          path: /app/image-storage2
+          path: /app/image-storage4
           blobfuse2:
             container: testdata3
             uid: 1002
@@ -120,7 +120,7 @@ spec:
           uid: 1001
           accessMode: ReadOnlyMany
       - name: storage4
-        path: /app/image-storage2
+        path: /app/image-storage4
         blobfuse2:
           container: testdata3
           uid: 1002
