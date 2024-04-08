@@ -1,0 +1,127 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/equinor/radix-operator/release/json-schema/radixapplication.json
+apiVersion: radix.equinor.com/v1
+kind: RadixApplication
+metadata:
+  name: radix-mini-app4
+spec:
+  build:
+    useBuildKit: true
+    useBuildCache: true
+  environments:
+  - name: dev
+    build:
+      from: main
+  - name: dev2
+    build:
+      from: main
+  - name: dev3
+    build:
+      from: main
+  - name: dev4
+    build:
+      from: main
+  components:
+  - name: server
+    ports:
+      - name: http
+        port: 8080
+    publicPort: http
+    image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
+    environmentConfig:
+      - environment: dev
+      - environment: dev2
+        monitoring: false
+      - environment: dev3
+        monitoring: true
+    volumeMounts:
+      - name: storage1
+        path: /app/image-storage
+        type: fuse2
+        container: testdata
+        uid: 1000
+        accessMode: ReadWriteMany
+      - name: storage2
+        path: /app/image-storage
+        blobfuse2:
+          container: testdata
+          uid: 1000
+          accessMode: ReadWriteMany
+      - name: storage3
+        path: /app/image-storage2
+        blobfuse2:
+          container: testdata
+          uid: 1000
+          accessMode: ReadWriteMany
+  - name: server2
+    ports:
+      - name: http
+        port: 8080
+    volumeMounts:
+      - name: storage1
+        path: /app/image-storage
+        type: fuse2
+        container: testdata
+        uid: 1000
+        accessMode: ReadWriteMany
+      - name: storage2
+        path: /app/image-storage
+        blobfuse2:
+          container: testdata
+          uid: 1000
+          accessMode: ReadWriteMany
+      - name: storage3
+        path: /app/image-storage2
+        blobfuse2:
+          container: testdata
+          uid: 1000
+          accessMode: ReadWriteMany
+    publicPort: http
+    image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
+    environmentConfig:
+      - environment: dev
+      - environment: dev2
+        volumeMounts:
+        - name: storage1
+          path: /app/image-storage
+          type: fuse2
+          container: testdata
+          uid: 1000
+          accessMode: ReadWriteMany
+        - name: storage2
+          path: /app/image-storage2
+          blobfuse2:
+            container: testdata2
+            uid: 1001
+            accessMode: ReadOnlyMany
+        - name: storage4
+          path: /app/image-storage2
+          blobfuse2:
+            container: testdata3
+            uid: 1002
+            accessMode: ReadOnlyMany
+  - name: server3
+    ports:
+      - name: http
+        port: 8080
+    monitoring: false
+    publicPort: http
+    image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
+    volumeMounts:
+      - name: storage1
+        path: /app/image-storage
+        type: fuse2
+        container: testdata
+        uid: 1000
+        accessMode: ReadWriteMany
+      - name: storage2
+        path: /app/image-storage2
+        blobfuse2:
+          container: testdata2
+          uid: 1001
+          accessMode: ReadOnlyMany
+      - name: storage4
+        path: /app/image-storage2
+        blobfuse2:
+          container: testdata3
+          uid: 1002
+          accessMode: ReadOnlyMany
