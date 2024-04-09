@@ -76,7 +76,7 @@ spec:
           skuName: Standard_LRS
           streaming:
             blockSize: 1M
-            bufferSize: 1M
+            bufferSize: 1
             enabled: true
             maxBlocksPerFile: 100
             maxBuffers: 2
@@ -112,7 +112,7 @@ spec:
             skuName: Standard_GRS
             streaming:
               blockSize: 2M
-              bufferSize: 3M
+              bufferSize: 3
               enabled: false
               maxBlocksPerFile: 101
               maxBuffers: 3
