@@ -75,12 +75,12 @@ spec:
           requestsStorage: 1M
           skuName: Standard_LRS
           streaming:
-            blockSize: 1M
+            blockSize: 1
             bufferSize: 1
             enabled: true
             maxBlocksPerFile: 100
             maxBuffers: 2
-            streamCache: 1M
+            streamCache: 1
       - name: storage3
         path: /app/image-storage3
         blobfuse2:
@@ -111,12 +111,12 @@ spec:
             requestsStorage: 10M
             skuName: Standard_GRS
             streaming:
-              blockSize: 2M
+              blockSize: 2
               bufferSize: 3
               enabled: false
               maxBlocksPerFile: 101
               maxBuffers: 3
-              streamCache: 4M
+              streamCache: 4
         - name: storage4
           path: /app/image-storage4
           blobfuse2:
