@@ -149,11 +149,9 @@ spec:
           container: testdata4
           uid: 1002
           accessMode: ReadOnlyMany
-jobs:
+  jobs:
   - name: job1
-    ports:
-      - name: http
-        port: 8080
+    schedulerPort: 8080
     volumeMounts:
       - name: storage1
         path: /app/image-storage
@@ -185,7 +183,6 @@ jobs:
           container: testdata
           uid: 1000
           accessMode: ReadWriteMany
-    publicPort: http
     image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
     environmentConfig:
       - environment: dev
