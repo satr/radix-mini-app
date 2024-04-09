@@ -65,10 +65,22 @@ spec:
         accessMode: ReadWriteMany
       - name: storage2
         path: /app/image-storage2
-        blobfuse2:
+        blobFuse2:
           container: testdata
           uid: 1000
           accessMode: ReadWriteMany
+          bindingMode: Immediate
+          gid: 1000
+          protocol: fuse2
+          requestsStorage: 1M
+          skuName: Standard_LRS
+          streaming:
+            blockSize: 1M
+            bufferSize: 1M
+            enabled: true
+            maxBlocksPerFile: 100
+            maxBuffers: 2
+            streamCache: 1M
       - name: storage3
         path: /app/image-storage3
         blobfuse2:
@@ -88,11 +100,23 @@ spec:
           uid: 1000
           accessMode: ReadWriteMany
         - name: storage2
-          path: /app/image-storage2
-          blobfuse2:
+          path: /app/image-storage22
+          blobFuse2:
             container: testdata2
             uid: 1001
             accessMode: ReadOnlyMany
+            bindingMode: WaitForFirstConsumer
+            gid: 1001
+            protocol: nfs
+            requestsStorage: 10M
+            skuName: Standard_GRS
+            streaming:
+              blockSize: 2M
+              bufferSize: 3M
+              enabled: false
+              maxBlocksPerFile: 101
+              maxBuffers: 3
+              streamCache: 4M
         - name: storage4
           path: /app/image-storage4
           blobfuse2:
@@ -120,7 +144,6 @@ spec:
           uid: 1001
           accessMode: ReadOnlyMany
       - name: storage4
-        path: /app/image-storage4
         blobfuse2:
           container: testdata3
           uid: 1002
