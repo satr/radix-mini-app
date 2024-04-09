@@ -120,8 +120,8 @@ spec:
         - name: storage4
           path: /app/image-storage4
           blobfuse2:
-            container: testdata3
-            uid: 1002
+            container: testdata44
+            uid: 1004
             accessMode: ReadOnlyMany
   - name: server3
     ports:
@@ -144,7 +144,8 @@ spec:
           uid: 1001
           accessMode: ReadOnlyMany
       - name: storage4
+        path: /app/image-storage4
         blobfuse2:
-          container: testdata3
+          container: testdata4
           uid: 1002
           accessMode: ReadOnlyMany
