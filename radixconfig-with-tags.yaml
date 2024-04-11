@@ -19,7 +19,7 @@ spec:
         port: 8080
     publicPort: http
 #    imageTagName: 1.24.0-alpine-slim
-    image: nginxinc/nginx-unprivileged:imageTagName
+    image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
 #    image: nginxinc/nginx-unprivileged:{imageTagName}
     # src: ./server2
     # dockerfileName: Dockerfile.legacy
