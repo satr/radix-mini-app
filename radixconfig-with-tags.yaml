@@ -31,5 +31,5 @@ spec:
       - environment: dev3
         imageTagName: alpine-perl
       - environment: dev4
-#        imageTagName: alpine-perl
+        imageTagName: alpine-perl
         src: ./server2
