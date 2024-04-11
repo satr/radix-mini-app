@@ -27,7 +27,7 @@ spec:
 #    imageTagName: 1.24.0-alpine-slim
 #    image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
 #    image: nginxinc/nginx-unprivileged:{imageTagName}
-    image: python3
+    image: python
 #    environmentConfig:
 #      - environment: dev
 #        imageTagName: alpine3.18-perl
