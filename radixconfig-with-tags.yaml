@@ -11,27 +11,28 @@ spec:
   - name: dev
     build:
       from: main
-  - name: dev2
-  - name: dev3
-  - name: dev4
-    build:
-      from: main
+#  - name: dev2
+#  - name: dev3
+#  - name: dev4
+#    build:
+#      from: main
   components:
   - name: server
     secrets:
       - DB_CONNECTION_STRING
-    ports:
-      - name: http2
-        port: 8080
-    publicPort: http2
-    imageTagName: 1.24.0-alpine-slim
+#    ports:
+#      - name: http2
+#        port: 8080
+#    publicPort: http2
+#    imageTagName: 1.24.0-alpine-slim
 #    image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
-    image: nginxinc/nginx-unprivileged:{imageTagName}
-    environmentConfig:
-      - environment: dev
-        imageTagName: alpine3.18-perl
-      - environment: dev3
-        imageTagName: alpine-perl
-      - environment: dev4
-        imageTagName: alpine-perl
-        src: ./server2
+#    image: nginxinc/nginx-unprivileged:{imageTagName}
+    image: python3
+#    environmentConfig:
+#      - environment: dev
+#        imageTagName: alpine3.18-perl
+#      - environment: dev3
+#        imageTagName: alpine-perl
+#      - environment: dev4
+#        imageTagName: alpine-perl
+#        src: ./server2
