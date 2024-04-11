@@ -18,6 +18,8 @@ spec:
       from: main
   components:
   - name: server
+    secrets:
+      DB_CONNECTION_STRING
     ports:
       - name: http2
         port: 8080
