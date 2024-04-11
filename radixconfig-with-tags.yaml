@@ -19,7 +19,7 @@ spec:
   components:
   - name: server
     secrets:
-      DB_CONNECTION_STRING
+      - DB_CONNECTION_STRING
     ports:
       - name: http2
         port: 8080
