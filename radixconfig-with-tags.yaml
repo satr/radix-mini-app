@@ -18,16 +18,13 @@ spec:
 #      from: main
   components:
   - name: server
-    secrets:
-      - DB_CONNECTION_STRING
 #    ports:
 #      - name: http2
 #        port: 8080
 #    publicPort: http2
-#    imageTagName: 1.24.0-alpine-slim
+    imageTagName: 1.24.0-alpine-slim
 #    image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
     image: nginxinc/nginx-unprivileged:{imageTagName}
-    image: python
     environmentConfig:
       - environment: dev
         imageTagName: alpine3.18-perl
