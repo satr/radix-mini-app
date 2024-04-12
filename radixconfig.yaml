@@ -5,8 +5,10 @@ metadata:
   name: radix-mini-app
 spec:
   build:
-#    useBuildKit: true
-#    useBuildCache: true
+    useBuildKit: true
+    useBuildCache: true
+    secrets:
+      - S1
   environments:
   - name: dev
     build:
@@ -17,7 +19,7 @@ spec:
   - name: dev3
     build:
       from: release
-  - name: dev4
+  - name: dev5
   dnsAlias:
     - alias: myapp321
       component: server
@@ -32,8 +34,14 @@ spec:
       - name: http
         port: 8080
     publicPort: http
-    image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
+    image: nginxinc/nginx-unprivileged:alpine-slim
   - name: server2
+    ports:
+      - name: http
+        port: 8080
+    publicPort: http
+    image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
+  - name: server3
     ports:
       - name: http
         port: 8080
