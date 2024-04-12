@@ -187,34 +187,34 @@ spec:
     environmentConfig:
       - environment: dev
       - environment: dev2
-#        volumeMounts:
-#          - name: storage1
-#            path: /app/image-storage11
-#            type: azure-blob
-#            storage: testdata
-#            uid: 1011
-#            accessMode: ReadOnlyMany
-#          - name: storage2
-#            path: /app/image-storage22
-#            blobFuse2:
-#              container: testdata2
-#              uid: 1001
-#              accessMode: ReadOnlyMany
-#              bindingMode: WaitForFirstConsumer
-#              gid: 1001
-#              protocol: nfs
-#              requestsStorage: 10M
-#              skuName: Standard_GRS
-#              streaming:
-#                blockSize: 2
-#                bufferSize: 3
-#                enabled: false
-#                maxBlocksPerFile: 101
-#                maxBuffers: 3
-#                streamCache: 4
-#          - name: storage4
-#            path: /app/image-storage4
-#            blobfuse2:
-#              container: testdata44
-#              uid: 1004
-#              accessMode: ReadOnlyMany
+        volumeMounts:
+          - name: storage1
+            path: /app/image-storage11
+            type: azure-blob
+            storage: testdata
+            uid: 1011
+            accessMode: ReadOnlyMany
+          - name: storage2
+            path: /app/image-storage22
+            blobFuse2:
+              container: testdata2
+              uid: 1001
+              accessMode: ReadOnlyMany
+              bindingMode: WaitForFirstConsumer
+              gid: 1001
+              protocol: nfs
+              requestsStorage: 10M
+              skuName: Standard_GRS
+              streaming:
+                blockSize: 2
+                bufferSize: 3
+                enabled: false
+                maxBlocksPerFile: 101
+                maxBuffers: 3
+                streamCache: 4
+          - name: storage4
+            path: /app/image-storage4
+            blobfuse2:
+              container: testdata44
+              uid: 1004
+              accessMode: ReadOnlyMany
