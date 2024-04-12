@@ -19,7 +19,7 @@ spec:
       from: release
   - name: dev4
   dnsAlias:
-    - alias: myapp3
+    - alias: myapp32
       component: server
       environment: dev
   dnsExternalAlias:
