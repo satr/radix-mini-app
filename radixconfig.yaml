@@ -32,9 +32,12 @@ spec:
       component: server2
       environment: dev
   dnsExternalAlias:
-    - alias: myapp321.equinor.com
+    - alias: myapp421.equinor.com
       component: server2
       environment: dev
+    - alias: myapp421.equinor.com
+      component: server1
+      environment: dev2
   components:
   - name: server
     ports:
@@ -56,3 +59,6 @@ spec:
     image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
     # src: ./server2
     # dockerfileName: Dockerfile.legacy
+  dnsAppAlias:
+    environment: dev
+    component: server
