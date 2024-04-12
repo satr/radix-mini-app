@@ -9,6 +9,7 @@ spec:
     useBuildCache: true
     secrets:
       - S1
+      - S2
   environments:
   - name: dev
     build:
@@ -23,7 +24,13 @@ spec:
   dnsAlias:
     - alias: myapp321
       component: server
+      environment: dev
+    - alias: myapp322
+      component: server2
       environment: dev2
+    - alias: myapp323
+      component: server2
+      environment: dev
   dnsExternalAlias:
     - alias: myapp321.equinor.com
       component: server2
