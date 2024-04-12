@@ -19,12 +19,12 @@ spec:
       from: release
   - name: dev4
   dnsAlias:
-    - alias: myapp32
+    - alias: myapp321
       component: server
-      environment: dev
+      environment: dev2
   dnsExternalAlias:
-    - alias: myapp32.equinor.com
-      component: server
+    - alias: myapp321.equinor.com
+      component: server2
       environment: dev
   components:
   - name: server
