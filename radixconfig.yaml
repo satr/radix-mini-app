@@ -61,4 +61,4 @@ spec:
     # dockerfileName: Dockerfile.legacy
   dnsAppAlias:
     environment: dev
-    component: server
+    component: server2
