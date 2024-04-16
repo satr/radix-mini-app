@@ -51,6 +51,13 @@ spec:
         port: 8080
     publicPort: http
     image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
+    resources:
+      requests:
+        memory: 100Mi
+        cpu: 100m
+      limits:
+        memory: 200Mi
+        cpu: 200m
   - name: server3
     ports:
       - name: http
