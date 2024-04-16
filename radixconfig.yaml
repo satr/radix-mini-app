@@ -13,7 +13,7 @@ spec:
   environments:
   - name: dev
     build:
-      from: mai\.
+      from: mai.
   - name: dev2
     build:
       from: ma*
