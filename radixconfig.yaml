@@ -27,6 +27,8 @@ spec:
     build:
       from: "*"
   - name: dev6
+    build:
+      from: main
   dnsAlias:
     - alias: myapp321
       component: server
