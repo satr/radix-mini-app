@@ -25,7 +25,7 @@ spec:
       from: rel.ase
   - name: dev5
     build:
-      from: *
+      from: "*"
   dnsAlias:
     - alias: myapp321
       component: server
