@@ -31,15 +31,15 @@ spec:
       from: main
   - name: dev7
   dnsAlias:
-    - alias: myapp327
+    - alias: myapp328
       component: server
       environment: dev
     - alias: myapp322
       component: server2
-      environment: dev
+      environment: dev2
     - alias: myapp323
       component: server2
-      environment: dev3
+      environment: dev2
   dnsExternalAlias:
     - alias: myapp721.equinor.com
       component: server2
