@@ -9,7 +9,7 @@ spec:
     useBuildCache: true
     secrets:
       - S1
-      - S2
+      - S3
   environments:
   - name: dev
     build:
@@ -29,18 +29,19 @@ spec:
   - name: dev6
     build:
       from: main
+  - name: dev7
   dnsAlias:
-    - alias: myapp321
+    - alias: myapp327
       component: server
       environment: dev
     - alias: myapp322
       component: server2
-      environment: dev2
+      environment: dev
     - alias: myapp323
       component: server2
-      environment: dev
+      environment: dev3
   dnsExternalAlias:
-    - alias: myapp521.equinor.com
+    - alias: myapp721.equinor.com
       component: server2
       environment: dev
     - alias: myapp422.equinor.com
@@ -76,4 +77,4 @@ spec:
     # dockerfileName: Dockerfile.legacy
   dnsAppAlias:
     environment: dev
-    component: server2
+    component: server
