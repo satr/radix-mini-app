@@ -30,10 +30,10 @@ spec:
     build:
       from: main
   - name: dev7
-#  dnsAlias:
-#    - alias: myapp324
-#      component: server
-#      environment: dev
+  dnsAlias:
+    - alias: myapp1
+      component: server
+      environment: dev
 #    - alias: myapp322
 #      component: server2
 #      environment: dev
