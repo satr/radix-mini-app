@@ -31,11 +31,11 @@ spec:
       from: main
   - name: dev7
   dnsAlias:
-#    - alias: myapp1
-#      component: server
-#      environment: dev
+    - alias: myapp1
+      component: server
+      environment: dev
     - alias: myapp2
-      component: server2
+      component: server1
       environment: dev2
     - alias: myapp3
       component: server2
