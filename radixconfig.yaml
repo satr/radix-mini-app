@@ -30,23 +30,23 @@ spec:
     build:
       from: main
   - name: dev7
-  dnsAlias:
-    - alias: myapp324
-      component: server
-      environment: dev
-    - alias: myapp322
-      component: server2
-      environment: dev
-    - alias: myapp323
-      component: server2
-      environment: dev
-  dnsExternalAlias:
-    - alias: myapp721.equinor.com
-      component: server2
-      environment: dev
-    - alias: myapp422.equinor.com
-      component: server
-      environment: dev2
+#  dnsAlias:
+#    - alias: myapp324
+#      component: server
+#      environment: dev
+#    - alias: myapp322
+#      component: server2
+#      environment: dev
+#    - alias: myapp323
+#      component: server2
+#      environment: dev
+#  dnsExternalAlias:
+#    - alias: myapp721.equinor.com
+#      component: server2
+#      environment: dev
+#    - alias: myapp422.equinor.com
+#      component: server
+#      environment: dev2
   components:
   - name: server
     ports:
@@ -75,6 +75,6 @@ spec:
     image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
     # src: ./server2
     # dockerfileName: Dockerfile.legacy
-  dnsAppAlias:
-    environment: dev
-    component: server
+#  dnsAppAlias:
+#    environment: dev
+#    component: server

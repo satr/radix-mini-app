@@ -13,38 +13,38 @@ spec:
     - name: dev2
       build:
         from: main
-  dnsAlias:
-    - alias: myapp3
-      component: server
-      environment: dev2
-    - alias: myapp1
-      component: server2
-      environment: dev
-    - alias: myapp2
-      component: server
-      environment: dev
-    - alias: myapp22
-      component: server
-      environment: dev
-  dnsExternalAlias:
-    - alias: some.radix.equinor.com
-      environment: dev2
-      component: server
-    - alias: some2.radix.equinor.com
-      environment: dev2
-      component: server2
-    - alias: another.radix.equinor.com
-      environment: dev
-      component: server2
-    - alias: another1.radix.equinor.com
-      environment: dev
-      component: server
-    - alias: another2.radix.equinor.com
-      environment: dev
-      component: server
-  dnsAppAlias:
-    environment: dev
-    component: server2
+#  dnsAlias:
+#    - alias: myapp3
+#      component: server
+#      environment: dev2
+#    - alias: myapp1
+#      component: server2
+#      environment: dev
+#    - alias: myapp2
+#      component: server
+#      environment: dev
+#    - alias: myapp22
+#      component: server
+#      environment: dev
+#  dnsExternalAlias:
+#    - alias: some.radix.equinor.com
+#      environment: dev2
+#      component: server
+#    - alias: some2.radix.equinor.com
+#      environment: dev2
+#      component: server2
+#    - alias: another.radix.equinor.com
+#      environment: dev
+#      component: server2
+#    - alias: another1.radix.equinor.com
+#      environment: dev
+#      component: server
+#    - alias: another2.radix.equinor.com
+#      environment: dev
+#      component: server
+#  dnsAppAlias:
+#    environment: dev
+#    component: server2
   components:
     - name: server
       ports:
