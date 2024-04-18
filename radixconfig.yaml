@@ -31,9 +31,9 @@ spec:
       from: main
   - name: dev7
   dnsAlias:
-    - alias: myapp1
-      component: server
-      environment: dev
+#    - alias: myapp1
+#      component: server
+#      environment: dev
 #    - alias: myapp2
 #      component: server2
 #      environment: dev
