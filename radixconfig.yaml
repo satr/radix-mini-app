@@ -34,12 +34,12 @@ spec:
 #    - alias: myapp1
 #      component: server
 #      environment: dev
-    - alias: myapp2
-      component: server2
-      environment: dev
-#    - alias: myapp3
+#    - alias: myapp2
 #      component: server2
 #      environment: dev
+    - alias: myapp3
+      component: server2
+      environment: dev
 #  dnsExternalAlias:
 #    - alias: myapp721.equinor.com
 #      component: server2
