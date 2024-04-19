@@ -28,8 +28,14 @@ spec:
       from: "*"
   - name: dev6
     build:
-      from: main
+      from: "v\d+\.\d+\.\d+"
   - name: dev7
+    build:
+      from: "^test-radix-."
+  - name: dev8
+    build:
+      from: main
+  - name: dev9
   dnsAlias:
     - alias: myapp1
       component: server
