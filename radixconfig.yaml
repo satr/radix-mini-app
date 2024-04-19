@@ -28,7 +28,7 @@ spec:
       from: "*"
   - name: dev6
     build:
-      from: "v\d+\.\d+\.\d+"
+      from: "v\\d+\\.\\d+\\.\\d+"
   - name: dev7
     build:
       from: "^test-radix-."
