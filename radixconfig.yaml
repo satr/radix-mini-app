@@ -60,6 +60,8 @@ spec:
         port: 8080
     publicPort: http
     image: nginxinc/nginx-unprivileged:alpine-slim
+    secrets:
+      - SECRET1
   - name: server2
     ports:
       - name: http
