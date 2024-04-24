@@ -43,7 +43,7 @@ spec:
     - alias: myapp2
       component: server
       environment: dev2
-    - alias: myapp3
+    - alias: myapp33
       component: server2
       environment: dev
 #  dnsExternalAlias:
