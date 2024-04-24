@@ -9,7 +9,7 @@ spec:
     useBuildCache: true
     secrets:
       - S1
-      - S3
+      - S4
   environments:
   - name: dev
     build:
@@ -40,10 +40,10 @@ spec:
     - alias: myapp1
       component: server
       environment: dev
-    - alias: myapp2
-      component: server
-      environment: dev2
-    - alias: myapp33
+#    - alias: myapp2
+#      component: server
+#      environment: dev2
+    - alias: myapp3777
       component: server2
       environment: dev
 #  dnsExternalAlias:
