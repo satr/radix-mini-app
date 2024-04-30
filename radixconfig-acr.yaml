@@ -68,6 +68,7 @@ spec:
         port: 8080
     publicPort: http
     src: server2
+    dockerfileName: Dockerfile2
     resources:
       requests:
         memory: 100Mi
