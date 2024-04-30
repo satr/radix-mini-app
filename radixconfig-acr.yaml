@@ -1,0 +1,88 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/equinor/radix-operator/release/json-schema/radixapplication.json
+apiVersion: radix.equinor.com/v1
+kind: RadixApplication
+metadata:
+  name: radix-mini-app
+spec:
+  build:
+    useBuildKit: false
+    useBuildCache: false
+    secrets:
+      - S1
+      - S4
+  environments:
+  - name: dev
+    build:
+      from: mai.
+  - name: dev2
+    build:
+      from: ma*
+  - name: dev3
+    build:
+      from: rel?ase
+  - name: dev4
+    build:
+      from: rel.ase
+  - name: dev5
+    build:
+      from: "*"
+  - name: dev6
+    build:
+      from: "v\\d+\\.\\d+\\.\\d+"
+  - name: dev7
+    build:
+      from: "^test-radix-."
+  - name: dev8
+    build:
+      from: main
+  - name: dev9
+  dnsAlias:
+    - alias: myapp1
+      component: server
+      environment: dev
+#    - alias: myapp2
+#      component: server
+#      environment: dev2
+    - alias: myapp3777
+      component: server2
+      environment: dev
+#  dnsExternalAlias:
+#    - alias: myapp721.equinor.com
+#      component: server2
+#      environment: dev
+#    - alias: myapp422.equinor.com
+#      component: server
+#      environment: dev2
+  components:
+  - name: server
+    ports:
+      - name: http
+        port: 8080
+    publicPort: http
+    image: nginxinc/nginx-unprivileged:alpine-slim
+    secrets:
+      - SECRET1
+  - name: server2
+    ports:
+      - name: http
+        port: 8080
+    publicPort: http
+    image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
+    resources:
+      requests:
+        memory: 100Mi
+        cpu: 100m
+      limits:
+        memory: 200Mi
+        cpu: 200m
+  - name: server3
+    ports:
+      - name: http
+        port: 8080
+    publicPort: http
+    image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
+    # src: ./server2
+    # dockerfileName: Dockerfile.legacy
+#  dnsAppAlias:
+#    environment: dev
+#    component: server
