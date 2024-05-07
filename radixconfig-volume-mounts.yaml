@@ -22,6 +22,7 @@ spec:
       from: main
   components:
   - name: server
+    readOnlyFileSystem: true
     ports:
       - name: http
         port: 8080
@@ -53,6 +54,7 @@ spec:
           uid: 1000
           accessMode: ReadWriteMany
   - name: server2
+    readOnlyFileSystem: true
     ports:
       - name: http
         port: 8080
@@ -124,6 +126,7 @@ spec:
             uid: 1004
             accessMode: ReadOnlyMany
   - name: server3
+    readOnlyFileSystem: true
     ports:
       - name: http
         port: 8080
@@ -151,6 +154,7 @@ spec:
           accessMode: ReadOnlyMany
   jobs:
   - name: job1
+    readOnlyFileSystem: true
     schedulerPort: 8080
     volumeMounts:
       - name: storage1

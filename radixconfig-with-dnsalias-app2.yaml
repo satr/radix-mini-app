@@ -47,6 +47,7 @@ spec:
 #    component: server2
   components:
     - name: server
+      readOnlyFileSystem: true
       ports:
         - name: http1
           port: 8080
@@ -60,6 +61,7 @@ spec:
         - environment: dev2
           enabled: true
     - name: server2
+      readOnlyFileSystem: true
       src: ./server2
       ports:
         - name: http1

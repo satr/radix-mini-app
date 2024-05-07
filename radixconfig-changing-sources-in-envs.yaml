@@ -19,6 +19,7 @@ spec:
       from: release
   components:
   - name: server
+    readOnlyFileSystem: true
     src: ./server
     dockerfileName: Dockerfile
     environmentConfig:
@@ -27,6 +28,7 @@ spec:
       - environment: prod
         image: nginxinc/nginx-unprivileged:alpine3.18-perl
   - name: server2
+    readOnlyFileSystem: true
     src: ./server2
     dockerfileName: Dockerfile
     environmentConfig:
@@ -36,6 +38,7 @@ spec:
       - environment: prod
         image: nginxinc/nginx-unprivileged:alpine3.18-perl
   - name: server3
+    readOnlyFileSystem: true
     src: ./
     dockerfileName: Dockerfile
     environmentConfig:
@@ -44,6 +47,7 @@ spec:
       - environment: prod
         image: nginxinc/nginx-unprivileged:alpine3.18-perl
   - name: server4
+    readOnlyFileSystem: true
     image: nginxinc/nginx-unprivileged:{imageTagName}
     environmentConfig:
       - environment: dev

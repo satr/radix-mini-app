@@ -19,10 +19,14 @@ spec:
       from: release
   components:
   - name: server
+    readOnlyFileSystem: true
     image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
   - name: server2
+    readOnlyFileSystem: true
     src: ./server2
   - name: server3
+    readOnlyFileSystem: true
     image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
   - name: server4
+    readOnlyFileSystem: true
     image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim

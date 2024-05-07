@@ -22,6 +22,7 @@ spec:
       from: main
   components:
   - name: server
+    readOnlyFileSystem: true
     ports:
       - name: http
         port: 8080
@@ -34,6 +35,7 @@ spec:
       - environment: dev3
         monitoring: true
   - name: server2
+    readOnlyFileSystem: true
     ports:
       - name: http
         port: 8080
@@ -47,6 +49,7 @@ spec:
       - environment: dev3
         monitoring: true
   - name: server3
+    readOnlyFileSystem: true
     ports:
       - name: http
         port: 8080

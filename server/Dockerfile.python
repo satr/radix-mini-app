@@ -1,0 +1,53 @@
+FROM python:3.12.2-alpine3.19 AS base
+
+ENV USER=1001
+
+WORKDIR /usr/src/code
+
+# Prerequisites
+RUN --mount=type=cache,target=/var/cache/apk/ \
+    apk add --update-cache \
+        build-base \
+        libffi-dev \
+        unixodbc-dev
+
+# Install python packages
+RUN pip install "poetry==1.8.2"
+COPY --chown="$USER:$USER" \
+    ./pyproject.toml \
+    ./poetry.lock \
+    .
+RUN poetry export --format constraints.txt --output requirements.prod.txt
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install \
+        --no-cache-dir \
+        --only-binary ':all:' \
+        --no-binary 'cffi' \
+        --no-binary 'pyodbc' \
+        --require-hashes \
+        --requirement requirements.prod.txt
+
+# Download and install the odbc packages based on image architecture
+RUN --mount=type=cache,target=/var/cache/apk/ \
+    apk add --update-cache \
+        curl
+RUN arch=$(arch | sed s/aarch64/arm64/ | sed s/x86_64/amd64/) && \
+    curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/msodbcsql18_18.3.2.1-1_${arch}.apk && \
+    curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/mssql-tools18_18.3.1.1-1_${arch}.apk && \
+    apk add --allow-untrusted msodbcsql18_18.3.2.1-1_${arch}.apk && \
+    apk add --allow-untrusted mssql-tools18_18.3.1.1-1_${arch}.apk
+
+COPY --chown="$USER:$USER" api ./api
+COPY --chown="$USER:$USER" alembic ./alembic
+COPY --chown="$USER:$USER" \
+    alembic.ini \
+    entrypoint.sh \
+    .
+
+USER $USER
+
+FROM base AS api-dev
+ENTRYPOINT ["/usr/src/code/entrypoint.sh", "--reload"]
+
+FROM base AS api-prod
+ENTRYPOINT ["/usr/src/code/entrypoint.sh"]

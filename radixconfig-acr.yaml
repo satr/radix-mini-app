@@ -55,6 +55,7 @@ spec:
 #      environment: dev2
   components:
   - name: server
+    readOnlyFileSystem: true
     ports:
       - name: http
         port: 8080
@@ -64,6 +65,7 @@ spec:
     secrets:
       - SECRET1
   - name: server2
+    readOnlyFileSystem: true
     ports:
       - name: http
         port: 8080
@@ -78,6 +80,7 @@ spec:
         memory: 200Mi
         cpu: 200m
   - name: server3
+    readOnlyFileSystem: true
     ports:
       - name: http
         port: 8080
