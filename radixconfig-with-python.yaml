@@ -13,6 +13,7 @@ spec:
       from: main
   components:
   - name: server
+    readOnlyFileSystem: true
     src: ./p
     secrets:
       - DB_CONNECTION_STRING

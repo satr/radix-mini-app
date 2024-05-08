@@ -13,6 +13,7 @@ spec:
       from: main
   components:
   - name: web-app-abc
+    readOnlyFileSystem: true
     src: .
     dockerfileName: Dockerfile.web-app2
     ports:

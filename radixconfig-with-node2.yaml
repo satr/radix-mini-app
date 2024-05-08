@@ -13,6 +13,7 @@ spec:
       from: main
   components:
   - name: web-app-abc
+    readOnlyFileSystem: true
     src: .
     dockerfileName: Dockerfile.web-app2
     ports:
@@ -31,6 +32,27 @@ spec:
     variables:
       NODE_ENV: 'production'
   - name: web-app-abc
+    readOnlyFileSystem: true
+    src: .
+    dockerfileName: Dockerfile.web-app2
+    ports:
+      - name: "http"
+        port: 3000
+    publicPort: "http"
+    variables:
+      NODE_ENV: 'production'
+  - name: web-app-abc
+    readOnlyFileSystem: true
+    src: .
+    dockerfileName: Dockerfile.web-app2
+    ports:
+      - name: "http"
+        port: 3000
+    publicPort: "http"
+    variables:
+      NODE_ENV: 'production'
+  - name: web-app-abc
+    readOnlyFileSystem: true
     src: .
     dockerfileName: Dockerfile.web-app2
     ports:
@@ -41,6 +63,7 @@ spec:
       NODE_ENV: 'production'
   - name: web-app-abc
     src: .
+    readOnlyFileSystem: true
     dockerfileName: Dockerfile.web-app2
     ports:
       - name: "http"
@@ -50,6 +73,7 @@ spec:
       NODE_ENV: 'production'
   - name: web-app-abc
     src: .
+    readOnlyFileSystem: true
     dockerfileName: Dockerfile.web-app2
     ports:
       - name: "http"
@@ -59,6 +83,7 @@ spec:
       NODE_ENV: 'production'
   - name: web-app-abc
     src: .
+    readOnlyFileSystem: true
     dockerfileName: Dockerfile.web-app2
     ports:
       - name: "http"
@@ -68,6 +93,7 @@ spec:
       NODE_ENV: 'production'
   - name: web-app-abc
     src: .
+    readOnlyFileSystem: true
     dockerfileName: Dockerfile.web-app2
     ports:
       - name: "http"
@@ -77,6 +103,7 @@ spec:
       NODE_ENV: 'production'
   - name: web-app-abc
     src: .
+    readOnlyFileSystem: true
     dockerfileName: Dockerfile.web-app2
     ports:
       - name: "http"
@@ -86,6 +113,7 @@ spec:
       NODE_ENV: 'production'
   - name: web-app-abc
     src: .
+    readOnlyFileSystem: true
     dockerfileName: Dockerfile.web-app2
     ports:
       - name: "http"
@@ -95,6 +123,7 @@ spec:
       NODE_ENV: 'production'
   - name: web-app-abc
     src: .
+    readOnlyFileSystem: true
     dockerfileName: Dockerfile.web-app2
     ports:
       - name: "http"
@@ -104,6 +133,7 @@ spec:
       NODE_ENV: 'production'
   - name: web-app-abc
     src: .
+    readOnlyFileSystem: true
     dockerfileName: Dockerfile.web-app2
     ports:
       - name: "http"
@@ -113,6 +143,7 @@ spec:
       NODE_ENV: 'production'
   - name: web-app-abc
     src: .
+    readOnlyFileSystem: true
     dockerfileName: Dockerfile.web-app2
     ports:
       - name: "http"
@@ -122,6 +153,7 @@ spec:
       NODE_ENV: 'production'
   - name: web-app-abc
     src: .
+    readOnlyFileSystem: true
     dockerfileName: Dockerfile.web-app2
     ports:
       - name: "http"
@@ -131,6 +163,7 @@ spec:
       NODE_ENV: 'production'
   - name: web-app-abc
     src: .
+    readOnlyFileSystem: true
     dockerfileName: Dockerfile.web-app2
     ports:
       - name: "http"
@@ -140,6 +173,7 @@ spec:
       NODE_ENV: 'production'
   - name: web-app-abc
     src: .
+    readOnlyFileSystem: true
     dockerfileName: Dockerfile.web-app2
     ports:
       - name: "http"
@@ -149,6 +183,7 @@ spec:
       NODE_ENV: 'production'
   - name: web-app-abc
     src: .
+    readOnlyFileSystem: true
     dockerfileName: Dockerfile.web-app2
     ports:
       - name: "http"
@@ -158,6 +193,7 @@ spec:
       NODE_ENV: 'production'
   - name: web-app-abc
     src: .
+    readOnlyFileSystem: true
     dockerfileName: Dockerfile.web-app2
     ports:
       - name: "http"
@@ -167,24 +203,7 @@ spec:
       NODE_ENV: 'production'
   - name: web-app-abc
     src: .
-    dockerfileName: Dockerfile.web-app2
-    ports:
-      - name: "http"
-        port: 3000
-    publicPort: "http"
-    variables:
-      NODE_ENV: 'production'
-  - name: web-app-abc
-    src: .
-    dockerfileName: Dockerfile.web-app2
-    ports:
-      - name: "http"
-        port: 3000
-    publicPort: "http"
-    variables:
-      NODE_ENV: 'production'
-  - name: web-app-abc
-    src: .
+    readOnlyFileSystem: true
     dockerfileName: Dockerfile.web-app2
     ports:
       - name: "http"

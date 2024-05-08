@@ -21,6 +21,7 @@ spec:
         from: main
   components:
     - name: component-1
+      readOnlyFileSystem: true
       src: ./server
       dockerfileName: Dockerfile2
       environmentConfig:
@@ -33,6 +34,7 @@ spec:
         - environment: dev4
           image: nginxinc/nginx-unprivileged:1-alpine3.18-perl
     - name: component-2
+      readOnlyFileSystem: true
       dockerfileName: Dockerfile2
       environmentConfig:
         - environment: dev1
@@ -44,6 +46,7 @@ spec:
         - environment: dev4
           image: nginxinc/nginx-unprivileged:mainline-alpine3.18-perl
     - name: component-3
+      readOnlyFileSystem: true
       src: ./server
       environmentConfig:
         - environment: dev1
