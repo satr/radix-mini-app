@@ -22,7 +22,7 @@ spec:
       from: main
   components:
   - name: server
-    readOnlyFileSystem: true
+    readOnlyFileSystem: false
     ports:
       - name: http
         port: 8080
