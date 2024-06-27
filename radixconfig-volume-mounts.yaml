@@ -11,15 +11,15 @@ spec:
   - name: dev
     build:
       from: main
-  - name: dev2
-    build:
-      from: main
-  - name: dev3
-    build:
-      from: main
-  - name: dev4
-    build:
-      from: main
+#  - name: dev2
+#    build:
+#      from: main
+#  - name: dev3
+#    build:
+#      from: main
+#  - name: dev4
+#    build:
+#      from: main
   components:
   - name: server
     readOnlyFileSystem: false
@@ -31,10 +31,10 @@ spec:
     environmentConfig:
       - environment: dev
         dockerfileName: Dockerfile.python
-      - environment: dev2
-        monitoring: false
-      - environment: dev3
-        monitoring: true
+#      - environment: dev2
+#        monitoring: false
+#      - environment: dev3
+#        monitoring: true
     volumeMounts:
       - name: storage1
         path: /app/image-storage1
@@ -71,6 +71,7 @@ spec:
           uid: 1000
           accessMode: ReadWriteMany
   - name: server2
+    enabled: false
     readOnlyFileSystem: true
     ports:
       - name: http
@@ -111,132 +112,134 @@ spec:
     image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
     environmentConfig:
       - environment: dev
-      - environment: dev2
-        volumeMounts:
-        - name: storage1
-          path: /app/image-storage
-          type: azure-blob
-          storage: testdata
-          uid: 1000
-          accessMode: ReadWriteMany
-        - name: storage2
-          path: /app/image-storage22
-          blobFuse2:
-            container: testdata2
-            uid: 1001
-            accessMode: ReadOnlyMany
-            bindingMode: WaitForFirstConsumer
-            gid: 1001
-            protocol: nfs
-            requestsStorage: 10M
-            skuName: Standard_GRS
-            streaming:
-              blockSize: 2
-              bufferSize: 3
-              enabled: false
-              maxBlocksPerFile: 101
-              maxBuffers: 3
-              streamCache: 4
-        - name: storage4
-          path: /app/image-storage4
-          blobfuse2:
-            container: testdata44
-            uid: 1004
-            accessMode: ReadOnlyMany
-  - name: server3
-    readOnlyFileSystem: true
-    ports:
-      - name: http
-        port: 8080
-    monitoring: false
-    publicPort: http
-    image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
-    volumeMounts:
-      - name: storage1
-        path: /app/image-storage
-        type: azure-blob
-        storage: testdata
-        uid: 1000
-        accessMode: ReadWriteMany
-      - name: storage2
-        path: /app/image-storage2
-        blobfuse2:
-          container: testdata2
-          uid: 1001
-          accessMode: ReadOnlyMany
-      - name: storage4
-        path: /app/image-storage4
-        blobfuse2:
-          container: testdata4
-          uid: 1002
-          accessMode: ReadOnlyMany
-  jobs:
-  - name: job1
-    readOnlyFileSystem: true
-    schedulerPort: 8080
-    volumeMounts:
-      - name: storage1
-        path: /app/image-storage
-        type: azure-blob
-        storage: testdata
-        uid: 1000
-        accessMode: ReadWriteMany
-      - name: storage2
-        path: /app/image-storage2
-        blobFuse2:
-          container: testdata
-          uid: 1000
-          accessMode: ReadWriteMany
-          bindingMode: Immediate
-          gid: 1000
-          protocol: fuse2
-          requestsStorage: 1M
-          skuName: Standard_LRS
-          streaming:
-            blockSize: 1
-            bufferSize: 1
-            enabled: true
-            maxBlocksPerFile: 100
-            maxBuffers: 2
-            streamCache: 1
-      - name: storage3
-        path: /app/image-storage3
-        blobfuse2:
-          container: testdata
-          uid: 1000
-          accessMode: ReadWriteMany
-    image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
-    environmentConfig:
-      - environment: dev
-      - environment: dev2
-        volumeMounts:
-          - name: storage1
-            path: /app/image-storage11
-            type: azure-blob
-            storage: testdata
-            uid: 1011
-            accessMode: ReadOnlyMany
-          - name: storage2
-            path: /app/image-storage22
-            blobFuse2:
-              container: testdata2
-              uid: 1001
-              accessMode: ReadOnlyMany
-              bindingMode: WaitForFirstConsumer
-              gid: 1001
-              protocol: nfs
-              requestsStorage: 10M
-              skuName: Standard_GRS
-              streaming:
-                blockSize: 2
-                bufferSize: 3
-                enabled: false
-                maxBlocksPerFile: 101
-                maxBuffers: 3
-                streamCache: 4
-          - name: storage4
-            path: /app/image-storage4
-            blobfuse2:
-              container: testdata44
-              uid: 1004
-              accessMode: ReadOnlyMany
+#      - environment: dev2
+#        volumeMounts:
+#        - name: storage1
+#          path: /app/image-storage
+#          type: azure-blob
+#          storage: testdata
+#          uid: 1000
+#          accessMode: ReadWriteMany
+#        - name: storage2
+#          path: /app/image-storage22
+#          blobFuse2:
+#            container: testdata2
+#            uid: 1001
+#            accessMode: ReadOnlyMany
+#            bindingMode: WaitForFirstConsumer
+#            gid: 1001
+#            protocol: nfs
+#            requestsStorage: 10M
+#            skuName: Standard_GRS
+#            streaming:
+#              blockSize: 2
+#              bufferSize: 3
+#              enabled: false
+#              maxBlocksPerFile: 101
+#              maxBuffers: 3
+#              streamCache: 4
+#        - name: storage4
+#          path: /app/image-storage4
+#          blobfuse2:
+#            container: testdata44
+#            uid: 1004
+#            accessMode: ReadOnlyMany
+#  - name: server3
+#    enabled: false
+#    readOnlyFileSystem: true
+#    ports:
+#      - name: http
+#        port: 8080
+#    monitoring: false
+#    publicPort: http
+#    image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
+#    volumeMounts:
+#      - name: storage1
+#        path: /app/image-storage
+#        type: azure-blob
+#        storage: testdata
+#        uid: 1000
+#        accessMode: ReadWriteMany
+#      - name: storage2
+#        path: /app/image-storage2
+#        blobfuse2:
+#          container: testdata2
+#          uid: 1001
+#          accessMode: ReadOnlyMany
+#      - name: storage4
+#        path: /app/image-storage4
+#        blobfuse2:
+#          container: testdata4
+#          uid: 1002
+#          accessMode: ReadOnlyMany
+#  jobs:
+#  - name: job1
+#    enabled: false
+#    readOnlyFileSystem: true
+#    schedulerPort: 8080
+#    volumeMounts:
+#      - name: storage1
+#        path: /app/image-storage
+#        type: azure-blob
+#        storage: testdata
+#        uid: 1000
+#        accessMode: ReadWriteMany
+#      - name: storage2
+#        path: /app/image-storage2
+#        blobFuse2:
+#          container: testdata
+#          uid: 1000
+#          accessMode: ReadWriteMany
+#          bindingMode: Immediate
+#          gid: 1000
+#          protocol: fuse2
+#          requestsStorage: 1M
+#          skuName: Standard_LRS
+#          streaming:
+#            blockSize: 1
+#            bufferSize: 1
+#            enabled: true
+#            maxBlocksPerFile: 100
+#            maxBuffers: 2
+#            streamCache: 1
+#      - name: storage3
+#        path: /app/image-storage3
+#        blobfuse2:
+#          container: testdata
+#          uid: 1000
+#          accessMode: ReadWriteMany
+#    image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
+#    environmentConfig:
+#      - environment: dev
+#      - environment: dev2
+#        volumeMounts:
+#          - name: storage1
+#            path: /app/image-storage11
+#            type: azure-blob
+#            storage: testdata
+#            uid: 1011
+#            accessMode: ReadOnlyMany
+#          - name: storage2
+#            path: /app/image-storage22
+#            blobFuse2:
+#              container: testdata2
+#              uid: 1001
+#              accessMode: ReadOnlyMany
+#              bindingMode: WaitForFirstConsumer
+#              gid: 1001
+#              protocol: nfs
+#              requestsStorage: 10M
+#              skuName: Standard_GRS
+#              streaming:
+#                blockSize: 2
+#                bufferSize: 3
+#                enabled: false
+#                maxBlocksPerFile: 101
+#                maxBuffers: 3
+#                streamCache: 4
+#          - name: storage4
+#            path: /app/image-storage4
+#            blobfuse2:
+#              container: testdata44
+#              uid: 1004
+#              accessMode: ReadOnlyMany
