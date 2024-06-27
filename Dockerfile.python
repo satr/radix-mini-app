@@ -1,0 +1,22 @@
+RUN apt-get update
+
+# Install odbc drivers
+RUN ACCEPT_EULA=Y apt install unixodbc msodbcsql18 --yes
+
+# Install dependencies
+
+# Pass on Git values for logging
+ARG GIT_COMMIT=unspecified
+ENV GIT_COMMIT=${GIT_COMMIT}
+
+# Set environment variables
+ENV TRANSFORMERS_OFFLINE=1
+ENV TOKENIZERS_PARALLELISM=false
+ENV GIT_PYTHON_REFRESH=quiet
+
+RUN groupadd -g 1000 mygroup && useradd -u 1000 -g mygroup myuser
+
+# Set user
+USER 1000
+WORKDIR /app
+CMD python -m http.server 8080

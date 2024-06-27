@@ -30,7 +30,7 @@ spec:
     image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
     environmentConfig:
       - environment: dev
-        dockerfileName: Dockerfile.web-app2
+        dockerfileName: Dockerfile.python
       - environment: dev2
         monitoring: false
       - environment: dev3
