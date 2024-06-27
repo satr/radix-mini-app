@@ -65,6 +65,7 @@ spec:
       - name: storage3
         path: /app/image-storage3a
         blobfuse2:
+          useAdls: true
           container: testdata
           uid: 1000
           accessMode: ReadWriteMany
@@ -101,6 +102,7 @@ spec:
       - name: storage3
         path: /app/image-storage3
         blobfuse2:
+          useAdls: true
           container: testdata
           uid: 1000
           accessMode: ReadWriteMany
