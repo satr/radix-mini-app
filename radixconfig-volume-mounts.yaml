@@ -54,7 +54,7 @@ spec:
           container: testdata
           uid: 1000
           accessMode: ReadWriteMany
-  - name: server
+  - name: server1
     readOnlyFileSystem: false
     ports:
       - name: http
