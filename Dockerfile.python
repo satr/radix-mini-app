@@ -1,3 +1,13 @@
+FROM python:3.12.1-slim
+
+# Set working directorry
+WORKDIR /workspace
+
+# Install library pre-requisites
+RUN apt-get update
+RUN apt install build-essential curl --yes
+RUN curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o /usr/share/keyrings/microsoft-prod.gpg
+RUN curl https://packages.microsoft.com/config/debian/12/prod.list | tee /etc/apt/sources.list.d/mssql-release.list
 RUN apt-get update
 
 # Install odbc drivers
