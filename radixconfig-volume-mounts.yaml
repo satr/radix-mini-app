@@ -55,21 +55,21 @@ spec:
           container: testdata
           uid: 1000
           accessMode: ReadWriteMany
-#  - name: server1
-#    readOnlyFileSystem: false
-#    ports:
-#      - name: http
-#        port: 8080
-#    publicPort: http
-#    dockerfileName: Dockerfile.python
-#    volumeMounts:
-#      - name: storage3
-#        path: /app/image-storage3a
-#        blobfuse2:
-#          useAdls: false
-#          container: testdata
-#          uid: 1000
-#          accessMode: ReadWriteMany
+  - name: server1
+    readOnlyFileSystem: false
+    ports:
+      - name: http
+        port: 8080
+    publicPort: http
+    dockerfileName: Dockerfile.python
+    volumeMounts:
+      - name: storage3
+        path: /app/image-storage3a
+        blobfuse2:
+          useAdls: false
+          container: testdata
+          uid: 1000
+          accessMode: ReadWriteMany
 #  - name: server2
 #    enabled: false
 #    readOnlyFileSystem: true
