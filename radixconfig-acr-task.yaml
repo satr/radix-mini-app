@@ -2,7 +2,7 @@
 apiVersion: radix.equinor.com/v1
 kind: RadixApplication
 metadata:
-  name: ihosloteam2
+  name: radix-mini-app
 spec:
   environments:
     - name: dev
@@ -11,8 +11,7 @@ spec:
     - name: prod
   components:
     - name: frontend
-      src: "./FrontEnd"
-      publicPort: http
+      src: "./web-app"
       ports:
         - name: http
           port: 8080
