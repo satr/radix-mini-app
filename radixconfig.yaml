@@ -5,8 +5,8 @@ metadata:
   name: radix-mini-app
 spec:
   build:
-    useBuildKit: true
-    useBuildCache: true
+#    useBuildKit: true
+#    useBuildCache: true
     secrets:
       - S1
       - S4
@@ -61,6 +61,7 @@ spec:
         port: 8080
     publicPort: http
     src: ./server
+    dockerfileName: Dockerfile.legacy
 #    image: nginxinc/nginx-unprivileged:alpine-slim
     secrets:
       - SECRET1
