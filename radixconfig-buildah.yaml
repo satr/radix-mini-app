@@ -40,6 +40,8 @@ spec:
     - alias: myapp1
       component: server
       environment: dev
+      runtime:
+        architecture: arm64
 #    - alias: myapp2
 #      component: server
 #      environment: dev2
