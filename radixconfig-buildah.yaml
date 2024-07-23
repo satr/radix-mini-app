@@ -40,8 +40,6 @@ spec:
     - alias: myapp1
       component: server
       environment: dev
-      runtime:
-        architecture: arm64
 #    - alias: myapp2
 #      component: server
 #      environment: dev2
@@ -63,6 +61,8 @@ spec:
         port: 8080
     publicPort: http
     src: server
+    runtime:
+      architecture: arm64
     secrets:
       - SECRET1
   - name: server2
