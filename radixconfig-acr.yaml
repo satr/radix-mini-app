@@ -7,9 +7,9 @@ spec:
   build:
     useBuildKit: false
     useBuildCache: false
-    secrets:
-      - S1
-      - S4
+    # secrets:
+    #   - S1
+    #   - S4
   environments:
   - name: dev
     build:
