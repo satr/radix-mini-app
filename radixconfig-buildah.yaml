@@ -67,7 +67,7 @@ spec:
       - SECRET1
     volumeMounts:
       - name: proxy-path
-        mountPath: /tmp/proxy_temp
+        path: /tmp/proxy_temp
         emptyDir:
           sizeLimit: 1M
   - name: server2
@@ -80,7 +80,7 @@ spec:
     dockerfileName: Dockerfile2
     volumeMounts:
     - name: proxy-path
-      mountPath: /tmp/proxy_temp
+      path: /tmp/proxy_temp
       emptyDir:
         sizeLimit: 1M
     resources:
