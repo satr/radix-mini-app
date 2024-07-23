@@ -1,4 +1,8 @@
-FROM docker.io/nginxinc/nginx-unprivileged:1.24.0-alpine-slim
+FROM docker.io/node:alpine
+
+WORKDIR /app
+
+COPY ./server .
 
 RUN echo "***************** root Dockerfile ******************"
 
@@ -9,7 +13,7 @@ RUN --mount=type=secret,id=TARGET_ENVIRONMENTS,dst=/abc/my-secrets/secret-1.txt 
 
 RUN echo "***************** root Dockerfile ******************"
 
-COPY ./server/server.conf /etc/nginx/conf.d/default.conf
 
-WORKDIR /app
-COPY ./server/index.html .
+USER 1001
+EXPOSE 8080
+CMD ["node", "server.js"]
