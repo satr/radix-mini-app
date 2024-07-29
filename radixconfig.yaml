@@ -5,8 +5,8 @@ metadata:
   name: radix-mini-app
 spec:
   build:
-#    useBuildKit: true
-#    useBuildCache: true
+    #    useBuildKit: true
+    #    useBuildCache: true
     secrets:
       - S1
       - S4

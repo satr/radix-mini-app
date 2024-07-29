@@ -1,0 +1,20 @@
+apiVersion: radix.equinor.com/v1
+kind: RadixApplication
+metadata:
+  name: myapp-264
+spec:
+  build:
+      useBuildKit: true
+      useBuildCache: true
+  environments:
+  - name: dev
+    build:
+      from: main
+  components:
+  - name: server
+    readOnlyFileSystem: true
+    ports:
+      - name: http
+        port: 8080
+    src: ./server
+    dockerfileName: Dockerfile.legacy

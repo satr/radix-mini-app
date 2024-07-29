@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/equinor/radix-operator/release/json-schema/radixapplication.json
+apiVersion: radix.equinor.com/v1
+kind: RadixApplication
+metadata:
+  name: APP_NAME
+spec:
+  build:
+      useBuildKit: true
+      useBuildCache: true
+  environments:
+  - name: dev
+    build:
+      from: main
+  components:
+  - name: server
+    readOnlyFileSystem: true
+    ports:
+      - name: http
+        port: 8080
+    src: ./server
+    dockerfileName: Dockerfile.legacy
