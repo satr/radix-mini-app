@@ -10,6 +10,9 @@ spec:
   - name: dev
     build:
       from: main
+  - name: dev2
+    build:
+      from: dev2
   components:
   - name: server
     readOnlyFileSystem: true
