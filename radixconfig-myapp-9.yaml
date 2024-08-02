@@ -8,6 +8,10 @@ spec:
       useBuildCache: true
       secrets:
       - A
+      subPipeline:
+        variables:
+          VAR1: value1
+          VAR2: value2
   environments:
   - name: dev
     build:
