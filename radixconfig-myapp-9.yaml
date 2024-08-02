@@ -10,6 +10,10 @@ spec:
   - name: dev
     build:
       from: main
+  dnsAlias:
+  - alias: myapp-abcdef
+    environment: dev
+    component: server
   components:
   - name: server
     readOnlyFileSystem: true
