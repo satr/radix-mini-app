@@ -6,11 +6,13 @@ spec:
   build:
       useBuildKit: true
       useBuildCache: true
+      secrets:
+      - A
   environments:
   - name: dev
     build:
       from: main
-  - name: prod
+  - name: prod2
   dnsAlias:
   - alias: myapp-abcdef
     environment: dev
