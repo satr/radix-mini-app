@@ -1,0 +1,5 @@
+FROM docker.io/alpine
+
+USER 1000
+
+CMD sh -c "echo 'start' && sleep 10 && echo 'stop'"

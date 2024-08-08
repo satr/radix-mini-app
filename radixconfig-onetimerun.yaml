@@ -1,0 +1,26 @@
+apiVersion: radix.equinor.com/v1
+kind: RadixApplication
+metadata:
+  name: radix-mini-app
+spec:
+  build:
+      useBuildKit: true
+      useBuildCache: true
+  environments:
+  - name: dev
+    build:
+      from: main
+  components:
+  - name: server
+    readOnlyFileSystem: true
+    dockerfileName: Dockerfile.onetimerun
+    horizontalScaling:
+      minReplicas: 0
+      maxReplicas: 1
+      triggers:
+      - name: cron
+        cron:
+          timezone: Europe/Oslo
+          start: 0 2 * * *
+          end: 5 2 * * *
+          desiredReplicas: 1
