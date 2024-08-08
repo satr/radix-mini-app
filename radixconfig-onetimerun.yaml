@@ -22,6 +22,6 @@ spec:
       - name: cron
         cron:
           timezone: Europe/Oslo
-          start: 0 2 * * *
-          end: 5 2 * * *
+          start: 10 11 * * *
+          end: 20 11 * * *
           desiredReplicas: 1
