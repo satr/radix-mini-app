@@ -12,6 +12,7 @@ spec:
       from: main
   components:
   - name: server
+    replicas: 0
     readOnlyFileSystem: true
     dockerfileName: Dockerfile.onetimerun
     horizontalScaling:
