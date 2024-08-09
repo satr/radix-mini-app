@@ -15,6 +15,9 @@ spec:
     replicas: 0
     readOnlyFileSystem: true
     dockerfileName: Dockerfile.onetimerun
+    variables:
+      TEST_VAR1: "Hello, World!"
+      TEST_VAR2: "1234"
     horizontalScaling:
       minReplicas: 0
       maxReplicas: 1
