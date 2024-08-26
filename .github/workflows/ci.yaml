@@ -32,7 +32,7 @@ jobs:
         with:
           args: >
             create pipeline-job
-            deploy
+            build-deploy
             --context development
             --application radix-mini-app
             --branch main
