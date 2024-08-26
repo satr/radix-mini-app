@@ -36,5 +36,5 @@ jobs:
             --context development
             --application radix-mini-app
             --branch main
-            --use-build-cache false
+            --use-build-cache true
             -f
