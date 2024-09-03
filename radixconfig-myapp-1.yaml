@@ -12,13 +12,13 @@ spec:
       from: main
   components:
   - name: server
+    dockerfileName: Dockerfile.with-metrics
     readOnlyFileSystem: true
     ports:
       - name: http
         port: 8080
     publicPort: "http"
     src: ./server
-    dockerfileName: Dockerfile.legacy
     monitoring: true
     authentication:
       oauth2:

@@ -22,4 +22,4 @@ RUN npm install
 
 USER 1001
 EXPOSE 8080
-CMD ["node", "server.js"]
+CMD ["node", "server-with-metrics.js"]

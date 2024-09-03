@@ -1,4 +1,5 @@
 const http = require('http');
+const client = require('prom-client');
 
 const requestListener = function (req, res) {
     res.writeHead(200);
