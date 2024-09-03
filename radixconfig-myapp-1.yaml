@@ -24,7 +24,6 @@ spec:
     monitoring: true
     monitoringConfig:
       portName: metrics
-      path: /my-metrics
     authentication:
       oauth2:
         clientID: 7ef841f8-a263-45ea-8993-683cc6817ae2
