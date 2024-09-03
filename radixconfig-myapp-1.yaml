@@ -20,6 +20,7 @@ spec:
         port: 1234
     src: ./server
     dockerfileName: Dockerfile.legacy
+    monitoring: true
     monitoringConfig:
       portName: metrics
       path: /my-metrics
