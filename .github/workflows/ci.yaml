@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - build-with-action
+permissions:
+  id-token: write
+  # contents: read # set required permissions (https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs)
+
+jobs:
+  build:
+    name: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Az CLI login'
+        uses: azure/login@v2
+        with:
+          client-id: 7ef841f8-a263-45ea-8993-683cc6817ae2 #app registration Application ID or user-assigned managed identity Client ID
+          tenant-id: 3aa4a235-b6e2-48d5-9195-7fcf05b459b0
+          allow-no-subscriptions: true
+      - name: 'Get Azure principal token for Radix'
+        run: |
+          token=$(az account get-access-token --resource 6dae42f8-4368-4678-94ff-3960e28e3630 --query=accessToken -otsv)
+          echo "::add-mask::$token"
+          echo "APP_SERVICE_ACCOUNT_TOKEN=$token" >> $GITHUB_ENV
+
+      - name: Show commit ID
+        run: echo "Commit ID is $GITHUB_SHA"
+      - name: Deploy API on Radix
+        uses: equinor/radix-github-actions@update-rx-version-1-20-0
+        with:
+          args: >
+            create pipeline-job
+            build-deploy
+            --context development
+            --application radix-mini-app
+            --branch main
+            --use-build-cache true
+            -f
