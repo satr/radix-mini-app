@@ -21,6 +21,7 @@ client.collectDefaultMetrics({ register });
 
 // Endpoint to serve metrics
 app.get('/metrics', async (req, res) => {
+    register.
     res.set('Content-Type', register.contentType);
     res.end(await register.metrics());
 });
