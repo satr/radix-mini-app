@@ -43,10 +43,10 @@ spec:
   # - name: dev12
   #   build:
   #     from: main
-  # - name: dev13
-  - name: dev14
-    build:
-      from: main
+  - name: dev13
+  # - name: dev14
+  #   build:
+  #     from: main
   dnsAlias:
     - alias: myapp1
       component: server
