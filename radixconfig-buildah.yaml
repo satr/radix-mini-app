@@ -32,14 +32,14 @@ spec:
   - name: dev7
     build:
       from: "^test-radix-."
-  - name: dev8
-    build:
-      from: main
-  # - name: dev9
-  # - name: dev10
-  # - name: dev11
+  # - name: dev8
   #   build:
   #     from: main
+  # - name: dev9
+  - name: dev10
+  - name: dev11
+    build:
+      from: main
   - name: dev12
     build:
       from: main
