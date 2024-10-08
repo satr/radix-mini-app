@@ -36,7 +36,7 @@ spec:
     build:
       from: main
   - name: dev9
-  - name: dev10
+  # - name: dev10
   # - name: dev11
   #   build:
   #     from: main
