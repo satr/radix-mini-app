@@ -23,30 +23,30 @@ spec:
   - name: dev4
     build:
       from: rel.ase
-  - name: dev5
-    build:
-      from: "*"
-  - name: dev6
-    build:
-      from: "v\\d+\\.\\d+\\.\\d+"
+  # - name: dev5
+  #   build:
+  #     from: "*"
+  # - name: dev6
+  #   build:
+  #     from: "v\\d+\\.\\d+\\.\\d+"
   - name: dev7
     build:
       from: "^test-radix-."
-  # - name: dev8
-  #   build:
-  #     from: main
-  # - name: dev9
-  - name: dev10
-  # - name: dev11
-  #   build:
-  #     from: main
-  # - name: dev12
-  #   build:
-  #     from: main
-  # - name: dev13
-  # - name: dev14
-  #   build:
-  #     from: main
+  - name: dev8
+    build:
+      from: main
+  - name: dev9
+  # - name: dev10
+  - name: dev11
+    build:
+      from: main
+  - name: dev12
+    build:
+      from: main
+  - name: dev13
+  - name: dev14
+    build:
+      from: main
   dnsAlias:
     - alias: myapp1
       component: server
