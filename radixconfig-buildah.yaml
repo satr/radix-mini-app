@@ -14,9 +14,9 @@ spec:
   - name: dev
     build:
       from: mai.
-  - name: dev2
-    build:
-      from: ma*
+  # - name: dev2
+  #   build:
+  #     from: ma*
   - name: dev3
     build:
       from: rel?ase
