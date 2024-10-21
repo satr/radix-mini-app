@@ -58,10 +58,10 @@ spec:
       component: server2
       environment: dev
   dnsExternalAlias:
-    - alias: myapp1.equinor.com
+    - alias: myapp10.equinor.com
       component: server2
       environment: dev
-    - alias: myapp2.equinor.com
+    - alias: myapp20.equinor.com
       component: server
       environment: dev2
 #  dnsAppAlias:
