@@ -61,12 +61,15 @@ spec:
     - alias: myapp102.equinor.com
       component: server2
       environment: dev
-    - alias: myapp201.equinor.com
-      component: server
-      environment: dev3
+    # - alias: myapp201.equinor.com
+    #   component: server
+    #   environment: dev3
     - alias: myapp301.equinor.com
       component: server
       environment: dev7
+    - alias: myapp401.equinor.com
+      component: server
+      environment: dev3
 #  dnsAppAlias:
 #    environment: dev
 #    component: server
