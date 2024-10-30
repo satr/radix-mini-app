@@ -61,6 +61,9 @@ spec:
     - alias: myapp103.equinor.com
       component: server2
       environment: dev
+    - alias: myapp104.equinor.com
+      component: server2
+      environment: dev
     # - alias: myapp201.equinor.com
     #   component: server
     #   environment: dev3
