@@ -47,6 +47,18 @@ spec:
   # - name: dev14
   #   build:
   #     from: main
+  - name: dev20
+    build:
+      from: *
+  - name: dev21
+    build:
+      from: *
+  - name: dev30
+    build:
+      from: ma*
+  - name: dev31
+    build:
+      from: ma*
   dnsAlias:
     - alias: myapp1
       component: server
