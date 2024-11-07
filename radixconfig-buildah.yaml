@@ -49,7 +49,7 @@ spec:
   #     from: main
   - name: dev20
     build:
-      from: "*""
+      from: "*"
   - name: dev21
     build:
       from: "*"
