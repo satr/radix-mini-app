@@ -19,7 +19,7 @@ spec:
   #     from: ma*
   - name: dev3
     build:
-      from: rel?ase
+      from: rel.?ase
   - name: dev4
     build:
       from: rel.ase
@@ -52,13 +52,16 @@ spec:
       from: "*"
   - name: dev21
     build:
-      from: "*"
+      from: ".*"
   - name: dev30
     build:
-      from: ma*
+      from: ma.*
   - name: dev31
     build:
-      from: ma*
+      from: ma.*
+  - name: dev32
+    build:
+      from: ma.+
   dnsAlias:
     - alias: myapp1
       component: server
