@@ -2,7 +2,8 @@ FROM docker.io/node:alpine
 
 WORKDIR /app
 
-COPY ./server .
+COPY ./server .  
+
 
 RUN echo "***************** root Dockerfile2 ******************"
 
