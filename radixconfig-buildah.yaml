@@ -14,28 +14,54 @@ spec:
   - name: dev
     build:
       from: mai.
-  - name: dev2
-    build:
-      from: ma*
+  # - name: dev2
+  #   build:
+  #     from: ma*
   - name: dev3
     build:
-      from: rel?ase
+      from: rel.?ase
   - name: dev4
     build:
       from: rel.ase
-  - name: dev5
-    build:
-      from: "*"
-  - name: dev6
-    build:
-      from: "v\\d+\\.\\d+\\.\\d+"
+  # - name: dev5
+  #   build:
+  #     from: "*"
+  # - name: dev6
+  #   build:
+  #     from: "v\\d+\\.\\d+\\.\\d+"
   - name: dev7
     build:
       from: "^test-radix-."
   - name: dev8
     build:
       from: main
-  - name: dev9
+  # - name: dev9
+  - name: dev10
+  - name: dev11
+    build:
+      from: main
+  # - name: dev12
+  #   build:
+  #     from: main
+  # - name: dev13
+  # - name: dev14
+  #   build:
+  #     from: main
+  - name: dev20
+    build:
+      from: "*"
+  - name: dev21
+    build:
+      from: ".*"
+  - name: dev30
+    build:
+      from: ma.*
+  - name: dev31
+    build:
+      from: ma.*
+  - name: dev32
+    build:
+      from: ma.+
   dnsAlias:
     - alias: myapp1
       component: server
@@ -46,13 +72,25 @@ spec:
     - alias: myapp3777
       component: server2
       environment: dev
-#  dnsExternalAlias:
-#    - alias: myapp721.equinor.com
-#      component: server2
-#      environment: dev
-#    - alias: myapp422.equinor.com
-#      component: server
-#      environment: dev2
+  dnsExternalAlias:
+    - alias: myapp1034.equinor.com
+      component: server2
+      environment: dev
+    # - alias: myapp104.equinor.com
+    #   component: server2
+    #   environment: dev
+    # - alias: myapp201.equinor.com
+    #   component: server
+    #   environment: dev3
+    - alias: myapp301.equinor.com
+      component: server
+      environment: dev10
+    # - alias: myapp401.equinor.com
+    #   component: server
+    #   environment: dev3
+#  dnsAppAlias:
+#    environment: dev
+#    component: server
   components:
   - name: server
     readOnlyFileSystem: true
@@ -89,6 +127,3 @@ spec:
     image: nginxinc/nginx-unprivileged:1.24.0-alpine-slim
     # src: ./server2
     # dockerfileName: Dockerfile.legacy
-#  dnsAppAlias:
-#    environment: dev
-#    component: server
