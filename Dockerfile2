@@ -5,6 +5,7 @@ WORKDIR /app
 COPY ./server .  
 
 
+
 RUN echo "***************** root Dockerfile2 ******************"
 
 RUN --mount=type=secret,id=RADIX_GIT_COMMIT_HASH,dst=/abc/my-secrets/secret-1.txt export RADIX_GIT_COMMIT_HASH=$(cat /abc/my-secrets/secret-1.txt) && echo $RADIX_GIT_COMMIT_HASH
