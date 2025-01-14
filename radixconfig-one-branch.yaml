@@ -10,10 +10,10 @@ spec:
   environments:
   - name: dev
     build:
-      from: *
+      from: ".*"
   - name: dev2
     build:
-      from: *
+      from: ".*"
   components:
   - name: server
     readOnlyFileSystem: true
